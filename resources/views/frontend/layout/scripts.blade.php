@@ -1,0 +1,10 @@
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="{{asset('assets/js/plugins.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/js/isotope.pkgd.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.waypoints.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.countdown.min.js')}}"></script>
+<script src="{{asset('assets/js/spectragram.min.js')}}"></script>
+<script src="{{asset('assets/js/main.js')}}"></script>
