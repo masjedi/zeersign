@@ -33,7 +33,7 @@
 <li><a href="index-v3.html">Home 3</a></li>
 </ul>
 </li>
-<li><a href="about.html">about</a></li>
+<li><a href="{{url('aboutus')}}">about</a></li>
 <li><a href="causes.html">Careers</a></li>
 <li><a href="#">Events</a>
 <ul class="nav-dropdown">
