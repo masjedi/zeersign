@@ -7,11 +7,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 	/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
 	
     Route::get('contactus','PagesController@contact');
+    Route::get('aboutus','PagesController@about_us');
+    Route::get('/','PagesController@index');
 });
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

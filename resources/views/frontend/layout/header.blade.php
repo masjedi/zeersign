@@ -6,11 +6,11 @@
 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
 <li><a href="#"><i class="fa fa-behance"></i></a></li>
-<li><a href="#">English</a></li>
-<li><a href="#">دری</a></li>
-<li><a href="#">پښتو</a></li>
+<li><a href="{{ LaravelLocalization::getLocalizedURL('en') }}">English</a></li>
+<li><a href="{{ LaravelLocalization::getLocalizedURL('fa') }}">دری</a></li>
+<li><a href="{{ LaravelLocalization::getLocalizedURL('ps') }}">پښتو</a></li>
 </ul>
-<a href="/cdn-cgi/l/email-protection#402e212d2500242f2d21292e6e232f2d" class="xs-top-bar-mail"><i class="fa fa-envelope-o"></i><span class="__cf_email__" data-cfemail="5c35323a2c1c39243d312c3039723f3331">[email&#160;protected]</span></a>
+<a href="/cdn-cgi/l/email-protection#402e212d2500242f2d21292e6e232f2d" class="xs-top-bar-mail"><i class="fa fa-envelope-o"></i><span class="__cf_email__" data-cfemail="5c35323a2c1c39243d312c3039723f3331">info@pooha.af</span></a>
 </div>
 <div class="nav-header">
 <div class="nav-toggle"></div>

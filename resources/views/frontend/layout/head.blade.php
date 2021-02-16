@@ -37,4 +37,84 @@
 
 <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
 
+@if(\LaravelLocalization::getCurrentLocaleDirection() == 'rtl')
+
+<style>
+
+.nav-header{
+    direction: rtl;
+    text-align: right;
+}
+   .xs-welcome-wraper p, .xs-welcome-wraper h2{
+    direction:rtl!important;
+     text-align:right!important;
+   }
+
+   .nav-menu{
+
+       direction:rtl;
+       text-align: right;
+   }
+   .xs-what-we-do-image{
+    direction:rtl;
+     text-align:right!important;
+
+   }
+   .xs-about-v2{
+    direction:rtl;
+     text-align:right!important;  
+   }
+
+    #after_about{
+        direction:rtl;
+        text-align:right;
+    }
+
+    #charity_section{
+     direction:rtl!important;
+     text-align:right!important;
+    }
+    #charity_press{
+     direction:rtl!important;
+     text-align:right!important;
+    }
+    #found_section{
+     direction:rtl!important;
+     text-align:right!important;
+    }
+    #event_section{
+     direction:rtl!important;
+     text-align:right!important;
+    }
+    #trusted_by{
+     direction:rtl!important;
+     text-align:right!important;
+    }
+    #before_footer{
+     direction:rtl!important;
+     text-align:right!important;
+    }
+    .xs-footer-section{
+        direction: rtl!important;
+        text-align:right;
+    }
+    #cookies{
+     direction:rtl!important;
+     text-align:right!important;
+    }
+    #cookies{
+     direction:rtl!important;
+     text-align:right!important;
+    }
+    #title{
+     direction:rtl!important;
+     text-align:right!important;
+    }
+
+
+
+</style>
+
+@endif
+
 </head>

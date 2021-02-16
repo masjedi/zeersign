@@ -5,13 +5,22 @@ use app\Mail\UsersEmails;
 use Illuminate\app\Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Blog;
+use App\Career;
 class PagesController extends Controller
 {
-    
+    private $language;
+    public function __construct()
+    {
+        $this->language = \LaravelLocalization::getCurrentLocale() == 'en' ? 'English' : (\LaravelLocalization::getCurrentLocale() === 'ps' ? 'Pashto' :  'Persian');
+
+
+    }
+
     public function index(){
-        $services = Service::where('language',$this->language)->get()->take(3);
-        $products = Product::where('language',$this->language)->get()->take(10);;
-         return view('frontend.index',compact('services','products'));
+        $blogs = Blog::where('language',$this->language)->get()->take(3);
+        $careers = Career::where('language',$this->language)->get()->take(4);
+         return view('frontend.index',compact('blogs','careers'));
      }
      public function product_details($title)
      {
@@ -42,7 +51,7 @@ class PagesController extends Controller
  
      public function about_us()
      {
-         return view('frontend.aboutus');
+         return view('frontend.about_us');
      }
  
      public function comingSoon()

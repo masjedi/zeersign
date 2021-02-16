@@ -77,7 +77,7 @@ join us now
 <div class="col-md-4">
 <div class="xs-service-promo box-image" style="background-image: url(assets/images/category/category_1.jpg)">
 <span class="icon-groceries"></span>
-<h5>Food Donate</h5>
+<h5>Dynamic Women</h5>
 <p>In Balukhali Camp in Cox’s Bazar, Bangladesh, women lack privacy, safe places to sleep, sufficient sanitation facilities and mental health support.</p>
 <div class="xs-black-overlay bg-aqua"></div>
 </div>
@@ -85,7 +85,7 @@ join us now
 <div class="col-md-4">
 <div class="xs-service-promo box-image" style="background-image: url(assets/images/category/category_2.jpg)">
 <span class="icon-care"></span>
-<h5>Medical Care</h5>
+<h5>Travelling</h5>
 <p>In Balukhali Camp in Cox’s Bazar, Bangladesh, women lack privacy, safe places to sleep, sufficient sanitation facilities and mental health support.</p>
 <div class="xs-black-overlay bg-purple"></div>
 </div>
@@ -93,7 +93,7 @@ join us now
 <div class="col-md-4">
 <div class="xs-service-promo box-image" style="background-image: url(assets/images/category/category_3.jpg)">
 <span class="icon-open-book"></span>
-<h5>Child Education</h5>
+<h5>Technology</h5>
 <p>In Balukhali Camp in Cox’s Bazar, Bangladesh, women lack privacy, safe places to sleep, sufficient sanitation facilities and mental health support.</p>
 <div class="xs-black-overlay bg-blue"></div>
 </div>
@@ -126,7 +126,7 @@ join us now
 </div>
 </section>
 
-<section class="bg-gray waypoint-tigger xs-section-padding xs-popularCauses-v2">
+<section class="bg-gray waypoint-tigger xs-section-padding xs-popularCauses-v2" id="charity_section">
 <div class="container">
 <div class="xs-heading row xs-mb-60">
 <div class="col-md-9 col-xl-9">
@@ -139,6 +139,7 @@ join us now
 </div>
 </div>
 <div class="row">
+    @foreach($blogs as $blog)
 <div class="col-lg-4 col-md-6">
 <div class="xs-popular-item xs-box-shadow">
 <div class="xs-item-header">
@@ -151,9 +152,9 @@ join us now
 </div>
 <div class="xs-item-content">
 <ul class="xs-simple-tag xs-mb-20">
-<li><a class="color-light-red" href="">Food</a></li>
+<li><a class="color-light-red" href="">{{$blog->title}}</a></li>
 </ul>
-<a href="#" class="xs-post-title xs-mb-30">Splash Drone 3 a Fully Waterproof Drone that floats</a>
+<a href="#" class="xs-post-title xs-mb-30">{{$blog->sub_title}}</a>
 <ul class="xs-list-with-content">
 <li>$67,000<span>Pledged</span></li>
 <li><span class="number-percentage-count number-percentage" data-value="90" data-animation-duration="3500">0</span>% <span>Funded</span></li>
@@ -171,171 +172,10 @@ join us now
 </div>
 </div>
 </div>
-<div class="col-lg-4 col-md-6">
-<div class="xs-popular-item xs-box-shadow">
-<div class="xs-item-header">
-<img src="assets/images/causes/causes_5.jpg" alt="">
-<div class="xs-skill-bar">
-<div class="xs-skill-track bg-purple">
-<p><span class="number-percentage-count number-percentage" data-value="59" data-animation-duration="3500">0</span>%</p>
-</div>
-</div>
-</div>
-<div class="xs-item-content">
-<ul class="xs-simple-tag xs-mb-20">
-<li><a class="color-purple" href="">Health</a></li>
-</ul>
-<a href="#" class="xs-post-title xs-mb-30">The Read Read: Braille Literacy Tool for the Blind</a>
-<ul class="xs-list-with-content">
-<li>$33,600<span>Pledged</span></li>
-<li><span class="number-percentage-count number-percentage" data-value="59" data-animation-duration="3500">0</span>% <span>Funded</span></li>
-<li>10<span>Days to go</span></li>
-</ul>
-<span class="xs-separetor"></span>
-<div class="row xs-margin-0">
-<div class="xs-round-avatar">
-<img src="assets/images/avatar/avatar_2.jpg" alt="">
-</div>
-<div class="xs-avatar-title">
-<a href="#"><span>By</span>Kene Williamson</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="xs-popular-item xs-box-shadow">
-<div class="xs-item-header">
-<img src="assets/images/causes/causes_6.jpg" alt="">
-<div class="xs-skill-bar">
-<div class="xs-skill-track bg-blue">
-<p><span class="number-percentage-count number-percentage" data-value="35" data-animation-duration="3500">0</span>%</p>
-</div>
-</div>
-</div>
-<div class="xs-item-content">
-<ul class="xs-simple-tag xs-mb-20">
-<li><a class="color-blue" href="">Education</a></li>
-</ul>
-<a href="#" class="xs-post-title xs-mb-30">BuildOne: $99 3D Printer w/ WiFi and Auto Bed Leveling!</a>
-<ul class="xs-list-with-content">
-<li>$12,760<span>Pledged</span></li>
-<li><span class="number-percentage-count number-percentage" data-value="35" data-animation-duration="3500">0</span>% <span>Funded</span></li>
-<li>66<span>Days to go</span></li>
-</ul>
-<span class="xs-separetor"></span>
-<div class="row xs-margin-0">
-<div class="xs-round-avatar">
-<img src="assets/images/avatar/avatar_3.jpg" alt="">
-</div>
-<div class="xs-avatar-title">
-<a href="#"><span>By</span>Leo Baddabes</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="xs-popular-item xs-box-shadow">
-<div class="xs-item-header">
-<img src="assets/images/causes/causes_7.jpg" alt="">
-<div class="xs-skill-bar">
-<div class="xs-skill-track bg-burntOrange">
-<p><span class="number-percentage-count number-percentage" data-value="85" data-animation-duration="3500">0</span>%</p>
-</div>
-</div>
-</div>
-<div class="xs-item-content">
-<ul class="xs-simple-tag xs-mb-20">
-<li><a class="color-burntOrange" href="">Charity</a></li>
-</ul>
-<a href="#" class="xs-post-title xs-mb-30">DACBerry PRO – Professional Soundcard for Raspberry Pi</a>
-<ul class="xs-list-with-content">
-<li>$99,980<span>Pledged</span></li>
-<li><span class="number-percentage-count number-percentage" data-value="85" data-animation-duration="3500">0</span>% <span>Funded</span></li>
-<li>2<span>Days to go</span></li>
-</ul>
-<span class="xs-separetor"></span>
-<div class="row xs-margin-0">
-<div class="xs-round-avatar">
-<img src="assets/images/avatar/avatar_4.jpg" alt="">
-</div>
-<div class="xs-avatar-title">
-<a href="#"><span>By</span>Jhung Li</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="xs-popular-item xs-box-shadow">
-<div class="xs-item-header">
-<img src="assets/images/causes/causes_8.jpg" alt="">
-<div class="xs-skill-bar">
-<div class="xs-skill-track bg-riptide">
-<p><span class="number-percentage-count number-percentage" data-value="74" data-animation-duration="3500">0</span>%</p>
-</div>
-</div>
-</div>
-<div class="xs-item-content">
-<ul class="xs-simple-tag xs-mb-20">
-<li><a class="color-riptide" href="">Cave</a></li>
-</ul>
-<a href="#" class="xs-post-title xs-mb-30">BIKI: First Bionic Wireless Under water Fish Drone</a>
-<ul class="xs-list-with-content">
-<li>$40,000<span>Pledged</span></li>
-<li><span class="number-percentage-count number-percentage" data-value="74" data-animation-duration="3500">0</span>% <span>Funded</span></li>
-<li>70<span>Days to go</span></li>
-</ul>
-<span class="xs-separetor"></span>
-<div class="row xs-margin-0">
-<div class="xs-round-avatar">
-<img src="assets/images/avatar/avatar_5.jpg" alt="">
-</div>
-<div class="xs-avatar-title">
-<a href="#"><span>By</span>Chirstina Perry</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="xs-popular-item xs-box-shadow">
-<div class="xs-item-header">
-<img src="assets/images/causes/causes_11.jpg" alt="">
-<div class="xs-skill-bar">
-<div class="xs-skill-track bg-orange">
-<p><span class="number-percentage-count number-percentage" data-value="89" data-animation-duration="3500">0</span>%</p>
-</div>
-</div>
-</div>
-<div class="xs-item-content">
-<ul class="xs-simple-tag xs-mb-20">
-<li><a class="color-orange" href="">Watar</a></li>
-</ul>
-<a href="#" class="xs-post-title xs-mb-30">Brilliant After All, A New Album by Rebecca: Help poor people</a>
-<ul class="xs-list-with-content">
-<li>$98,980<span>Pledged</span></li>
-<li><span class="number-percentage-count number-percentage" data-value="89" data-animation-duration="3500">0</span>% <span>Funded</span></li>
-<li>2<span>Days to go</span></li>
-</ul>
-<span class="xs-separetor"></span>
-<div class="row xs-margin-0">
-<div class="xs-round-avatar">
-<img src="assets/images/avatar/avatar_6.jpg" alt="">
-</div>
-<div class="xs-avatar-title">
-<a href="#"><span>By</span>Prekina William</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+@endforeach
 </section>
-
-<section class="xs-section-padding">
+<!-- Endof FundPress -->
+<section class="xs-section-padding" id="charity_section">
 <div class="container">
 <div class="row">
 <div class="col-md-12 col-lg-6">
@@ -364,7 +204,7 @@ If you don't understand how fast and easy it is to so long for your favorite cha
 </div>
 </section>
 
-<section class="bg-navy-blue">
+<section class="bg-navy-blue" id="charity_press">
 <div class="container-fulid">
 <div class="xs-feature-content">
 <h2 class="color-white">CharityPress are <span> charity </span> activities are taken place around the world, lets contribute.</h2>
@@ -372,7 +212,7 @@ If you don't understand how fast and easy it is to so long for your favorite cha
 </div>
 </section>
 
-<section class="xs-feature-box-fulid">
+<section class="xs-feature-box-fulid" id="charity_press">
 <div class="container-fulid">
 <div class="row xs-feature-box-wraper">
 <div class="col-md-12 col-lg-4 xs-feature-box bg-light-green">
@@ -383,7 +223,7 @@ get involved
 </a>
 </div>
 </div>
-<div class="col-md-12 col-lg-4 xs-feature-box highlight bg-purple">
+<div class="col-md-12 col-lg-4 xs-feature-box highlight bg-purple" id="charity_press">
 <div class="xs-feature-box-content">
 <h3 class="color-white">Sponsor an entire trending project</h3>
 <p>For $10,000 or more you can fully fund a water project for a Community. 100% funds clean water projects. 663 million people drink.</p>
@@ -392,7 +232,7 @@ Become an Sponsor
 </a>
 </div> 
 </div>
-<div class="col-md-12 col-lg-4 xs-feature-box bg-light-red">
+<div class="col-md-12 col-lg-4 xs-feature-box bg-light-red" id="charity_press">
 <div class="xs-feature-box-content">
 <h3 class="color-white">Connect with us on social media</h3>
 <ul class="xs-social-list">
@@ -408,40 +248,21 @@ Become an Sponsor
 </div>
 </section>
 
-<section class="xs-content-section-padding">
+<section class="xs-content-section-padding" id="found_section">
 <div class="container">
 <div class="xs-heading row col-lg-10 xs-mb-70 text-center mx-auto">
 <h2 class="xs-mb-0 xs-title">We’ve funded <span class="color-green">120,00 charity projects</span> for 20M people around the world.</h2>
 </div>
 <div class="row">
-<div class="col-md-6 col-lg-3">
-<div class="xs-service-promo">
-<span class="icon-water color-orange"></span>
-<h5>Pure Water <br>For Poor People</h5>
-<p>663 million people drink dirty water. Learn how access to clean water can improve health, boost local economies.</p>
-</div>
-</div>
-<div class="col-md-6 col-lg-3">
-<div class="xs-service-promo">
-<span class="icon-groceries color-red"></span>
-<h5>Healty Food <br>For Poor People</h5>
-<p>663 million people drink dirty water. Learn how access to clean water can improve health, boost local economies.</p>
-</div>
-</div>
-<div class="col-md-6 col-lg-3">
-<div class="xs-service-promo">
-<span class="icon-heartbeat color-purple"></span>
-<h5>Medical <br>Facilities for People</h5>
-<p>663 million people drink dirty water. Learn how access to clean water can improve health, boost local economies.</p>
-</div>
-</div>
-<div class="col-md-6 col-lg-3">
-<div class="xs-service-promo">
-<span class="icon-open-book color-green"></span>
-<h5>Pure Education <br>For Every Children</h5>
-<p>663 million people drink dirty water. Learn how access to clean water can improve health, boost local economies.</p>
-</div>
-</div>
+    @foreach($careers as $career)
+    <div class="col-md-6 col-lg-3">
+    <div class="xs-service-promo">
+    <span class="icon-water color-orange"></span>
+    <h5>{{$career->title}} <br>For Poor People</h5>
+    <p>{{$career->body}}</p>
+    </div>
+    </div>
+@endforeach
 </div>
 </div>
 </section>
@@ -486,7 +307,7 @@ Become an Sponsor
 </div>
 </section>
 
-<section class="xs-section-padding">
+<section class="xs-section-padding" id="event_section">
 <div class="container">
 <div class="xs-heading row xs-mb-60">
 <div class="col-md-9 col-xl-9">
@@ -518,77 +339,9 @@ Learn More
 </div>
 </div>
 </div>
-<div class="col-lg-6 row xs-single-event event-purple">
-<div class="col-md-5">
-<div class="xs-event-image">
-<img src="assets/images/event/event_2.jpg" alt="">
-<div class="xs-entry-date">
-<span class="entry-date-day">15</span>
-<span class="entry-date-month">aug</span>
-</div>
-<div class="xs-black-overlay"></div>
-</div>
-</div>
-<div class="col-md-7">
-<div class="xs-event-content">
-<a href="#">Arsenal, the intelligent.</a>
-<p>In a time of overwhelming emotions, sadness, and pain, obligations.</p>
-<div class="xs-countdown-timer" data-countdown="2020/08/24"></div>
-<a href="#" class="btn btn-primary">
-Learn More
-</a>
-</div>
-</div>
-</div>
-<div class="col-lg-6 row xs-single-event event-red">
-<div class="col-md-5">
-<div class="xs-event-image">
-<img src="assets/images/event/event_3.jpg" alt="">
-<div class="xs-entry-date">
-<span class="entry-date-day">24</span>
-<span class="entry-date-month">jan</span>
-</div>
-<div class="xs-black-overlay"></div>
-</div>
-</div>
-<div class="col-md-7">
-<div class="xs-event-content">
-<a href="#">Waterproof drone that</a>
-<p>In a time of overwhelming emotions, sadness, and pain, obligations.</p>
-<div class="xs-countdown-timer" data-countdown="2019/05/24"></div>
-<a href="#" class="btn btn-primary">
-Learn More
-</a>
-</div>
-</div>
-</div>
-<div class="col-lg-6 row xs-single-event event-blue">
-<div class="col-md-5">
-<div class="xs-event-image">
-<img src="assets/images/event/event_4.jpg" alt="">
-<div class="xs-entry-date">
-<span class="entry-date-day">23</span>
-<span class="entry-date-month">jun</span>
-</div>
-<div class="xs-black-overlay"></div>
-</div>
-</div>
-<div class="col-md-7">
-<div class="xs-event-content">
-<a href="">Braille Literacy Tool for.</a>
-<p>In a time of overwhelming emotions, sadness, and pain, obligations.</p>
-<div class="xs-countdown-timer" data-countdown="2020/02/24"></div>
-<a href="#" class="btn btn-primary">
-Learn More
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
 </section>
 
-<section class="bg-gray xs-partner-section" style="background-image: url('assets/images/map.png');">
+<section class="bg-gray xs-partner-section" id="trusted_by"style="background-image: url('assets/images/map.png');">
 <div class="container">
 <div class="row">
 <div class="col-lg-5">
@@ -615,7 +368,7 @@ join us now
 </div>
 </section>
 
-<section class="xs-section-padding">
+<section class="xs-section-padding" id="before_footer">
 <div class="container">
 <div class="xs-heading row xs-mb-60">
 <div class="col-md-9 col-xl-9">
