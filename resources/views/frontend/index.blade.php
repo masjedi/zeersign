@@ -75,9 +75,9 @@ join us now
 <div class="container">
 <div class="row">
 <div class="col-md-4">
-<div class="xs-service-promo box-image" style="background-image: url(assets/images/category/category_1.jpg)">
+<div class="xs-service-promo box-image" style="background-image: url(assets/images/category/category_2.jpg)">
 <span class="icon-groceries"></span>
-<h5>Dynamic Women</h5>
+<h5 style="color:#ffca10">Women Support</h5>
 <p>In Balukhali Camp in Cox’s Bazar, Bangladesh, women lack privacy, safe places to sleep, sufficient sanitation facilities and mental health support.</p>
 <div class="xs-black-overlay bg-aqua"></div>
 </div>
@@ -85,7 +85,7 @@ join us now
 <div class="col-md-4">
 <div class="xs-service-promo box-image" style="background-image: url(assets/images/category/category_2.jpg)">
 <span class="icon-care"></span>
-<h5>Travelling</h5>
+<h5 style="color:#ffca10">Travelling</h5>
 <p>In Balukhali Camp in Cox’s Bazar, Bangladesh, women lack privacy, safe places to sleep, sufficient sanitation facilities and mental health support.</p>
 <div class="xs-black-overlay bg-purple"></div>
 </div>
@@ -93,7 +93,7 @@ join us now
 <div class="col-md-4">
 <div class="xs-service-promo box-image" style="background-image: url(assets/images/category/category_3.jpg)">
 <span class="icon-open-book"></span>
-<h5>Technology</h5>
+<h5 style="color:#ffca10">Technology</h5>
 <p>In Balukhali Camp in Cox’s Bazar, Bangladesh, women lack privacy, safe places to sleep, sufficient sanitation facilities and mental health support.</p>
 <div class="xs-black-overlay bg-blue"></div>
 </div>
@@ -215,7 +215,7 @@ If you don't understand how fast and easy it is to so long for your favorite cha
 <section class="xs-feature-box-fulid" id="charity_press">
 <div class="container-fulid">
 <div class="row xs-feature-box-wraper">
-<div class="col-md-12 col-lg-4 xs-feature-box bg-light-green">
+<div class="col-md-12 col-lg-4 xs-feature-box" style="background-color:#3385c6">
 <div class="xs-feature-box-content">
 <h3 class="color-white">But we’re not done yet. We need your.</h3>
 <a href="#" class="btn btn-secondary btn-color-alt">
@@ -223,7 +223,7 @@ get involved
 </a>
 </div>
 </div>
-<div class="col-md-12 col-lg-4 xs-feature-box highlight bg-purple" id="charity_press">
+<div class="col-md-12 col-lg-4 xs-feature-box" style="background-color:#4279a3" id="charity_press">
 <div class="xs-feature-box-content">
 <h3 class="color-white">Sponsor an entire trending project</h3>
 <p>For $10,000 or more you can fully fund a water project for a Community. 100% funds clean water projects. 663 million people drink.</p>
@@ -232,7 +232,7 @@ Become an Sponsor
 </a>
 </div> 
 </div>
-<div class="col-md-12 col-lg-4 xs-feature-box bg-light-red" id="charity_press">
+<div class="col-md-12 col-lg-4 xs-feature-box" style="background-color:#3385c6" id="charity_press">
 <div class="xs-feature-box-content">
 <h3 class="color-white">Connect with us on social media</h3>
 <ul class="xs-social-list">
@@ -251,17 +251,19 @@ Become an Sponsor
 <section class="xs-content-section-padding" id="found_section">
 <div class="container">
 <div class="xs-heading row col-lg-10 xs-mb-70 text-center mx-auto">
-<h2 class="xs-mb-0 xs-title">We’ve funded <span class="color-green">120,00 charity projects</span> for 20M people around the world.</h2>
+<h2 class="xs-mb-0 xs-title">Career<span class="color-green">And Job Announcement</span> For Job Seekers Around the Country.</h2>
 </div>
 <div class="row">
     @foreach($careers as $career)
     <div class="col-md-6 col-lg-3">
-    <div class="xs-service-promo">
-    <span class="icon-water color-orange"></span>
-    <h5>{{$career->title}} <br>For Poor People</h5>
-    <p>{{$career->body}}</p>
+    <div class="xs-service-promo box-color bg-light-red">
+    <span class="fa fa-bullhorn"></span>
+    <a href=""><h5>{{$career->position}}</h5></a>
+    <p>{!!$career->body!!}</p><hr class="bg-light">
+    <p class="text-light">Deadline:{{$career->closing_date}}</p>
     </div>
     </div>
+
 @endforeach
 </div>
 </div>

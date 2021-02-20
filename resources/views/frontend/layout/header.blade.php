@@ -1,7 +1,7 @@
 <header class="xs-header header-transparent xs-box">
 <div class="container">
 <nav class="xs-menus">
-<div class="xs-top-bar clearfix">
+<div class="xs-top-bar clearfix" style="background-color:#057cae;">
 <ul class="xs-top-social">
 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -21,17 +21,12 @@
 <div class="nav-menus-wrapper row">
 <div class="xs-logo-wraper col-lg-2 col-xl-2 xs-padding-0">
 <a class="nav-brand" href="{{url('/')}}">
-<img src="assets/images/logo.png" alt="">
+<img src="{{asset('assets/images/logo.png')}}" alt="">
 </a>
 </div>
 <div class="col-lg-10 col-xl-7">
 <ul class="nav-menu">
 <li><a href="{{url('/')}}">Home</a>
-<ul class="nav-dropdown">
-<li><a href="index.html">Home 1</a></li>
-<li><a href="index-v2.html">Home 2</a></li>
-<li><a href="index-v3.html">Home 3</a></li>
-</ul>
 </li>
 <li><a href="{{url('aboutus')}}">about</a></li>
 <li><a href="causes.html">Careers</a></li>
@@ -63,7 +58,7 @@
 </ul>
 </div>
 <div class="xs-navs-button d-flex-center-end col-lg-3 col-xl-3 d-block d-lg-none d-xl-block">
-<a href="#" class="btn btn-primary">
+<a href="{{url('donation')}}" class="btn btn-primary" style="background-color:#ffca10;">
 <span class="badge"><i class="fa fa-heart"></i></span> Donate Now
 </a>
 </div>

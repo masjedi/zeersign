@@ -54,9 +54,9 @@ class PagesController extends Controller
          return view('frontend.about_us');
      }
  
-     public function comingSoon()
+     public function donate()
      {
-         return view('frontend.comingsoon');
+         return view('frontend.donate');
      }
  
      public function gallery(){
