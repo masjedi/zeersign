@@ -5,14 +5,17 @@ use Illuminate\Support\Facades\File;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Alert;
+use App\Type;
 use App\Event;
 class EventController extends Controller
 {
-
+    private $language;
     public function __construct()
     {
         $this->middleware('auth');
+        $this->language = \LaravelLocalization::getCurrentLocale() == 'en' ? 'English' : (\LaravelLocalization::getCurrentLocale() === 'ps' ? 'Pashto' :  'Persian');
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -20,7 +23,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::all();
+        $events = Event::where('language',$this->language)->get()->all();
         return view('backend.events.index',compact('events'));
     }
 
@@ -31,7 +34,8 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('backend.events.create');
+        $types = Type::where('language',$this->language)->get()->all();
+        return view('backend.events.create',compact('types'));
     }
 
     /**
@@ -50,7 +54,8 @@ class EventController extends Controller
         $events = new Event(); 
         $events->language = $request->input('language');
         $events->title = $request->input('title');
-        $events->sub_title = $request->input('sub_title');
+        $events->status = $request->input('status');
+        $events->type_id = $request->input('type_id');
         $events->body = $request->input('body');
         $events->vanue = $request->input('vanue');
         $events->date = $request->input('date');
@@ -95,7 +100,8 @@ class EventController extends Controller
         $events = Event::findOrFail($id);
         $events->language = $request->input('language');
         $events->title = $request->input('title');
-        $events->sub_title = $request->input('sub_title');
+        $events->status = $request->input('status');
+        $events->type_id = $request->input('type_id');
         $events->body = $request->input('body');
         $events->vanue = $request->input('vanue');
         $events->date = $request->input('date');

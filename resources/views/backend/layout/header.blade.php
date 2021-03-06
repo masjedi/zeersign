@@ -2,7 +2,7 @@
 			<div class="page-header-inner ">
 				<!-- logo start -->
 				<div class="page-logo">
-					<a href="index.html">
+					<a href="">
 						<img alt="" src="#">
 						<span class="logo-default">POOHA</span> </a>
 				</div>
@@ -23,37 +23,51 @@
 						<!-- end message dropdown -->
 						<!-- start manage user dropdown -->
 						<li class="dropdown dropdown-user">
-							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"
 								data-close-others="true">
-								<img alt="" class="img-circle " src="{{asset('assets/img/dp.jpg')}}" />
+								<img alt="" class="img-circle " src="{{asset('logo.png')}}" />
+								{{ Auth::user()->name }}
 								<span class="username username-hide-on-mobile">  </span>
 								<i class="fa fa-angle-down"></i>
 							</a>
 							<ul class="dropdown-menu dropdown-menu-default animated jello">
-								<li>
-									<a href="#">
-										<i class="icon-user"></i> Profile </a>
-								</li>
-								<li>
-								<a class="dropdown-item" href="{{ route('login') }}"
+
+							<li>
+							<a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Logout') }}<i class="fa fa-lock"></i>
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('login') }}" method="POST" class="d-none">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-								</li>
+                            </li>
 							</ul>
 						</li>
 						<!-- end manage user dropdown -->
-						<li class="dropdown dropdown-quick-sidebar-toggler">
-							<a id="headerSettingButton" class="mdl-button mdl-js-button mdl-button--icon pull-right"
-								data-upgraded=",MaterialButton">
-								<i class="material-icons">settings</i>
+						
+					</ul>
+					
+					<ul class="nav navbar-nav pull-right">
+						
+						<!-- end message dropdown -->
+						<!-- start manage user dropdown -->
+						<li class="dropdown dropdown-user">
+							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"
+								data-close-others="true">
+								<i class="fa fa-md fa-globe"></i>Language
+								<i class="fa fa-angle-down"></i>
 							</a>
+							<ul class="dropdown-menu dropdown-menu-default animated jello">
+
+							<li><a href="{{ LaravelLocalization::getLocalizedURL('ps') }}">پښتو</a></li>
+							<li><a href="{{ LaravelLocalization::getLocalizedURL('fa') }}">دری</a></li>
+							<li><a href="{{ LaravelLocalization::getLocalizedURL('en') }}">English</a></li>
+							</ul>
 						</li>
+						<!-- end manage user dropdown -->
+						
 					</ul>
 				</div>
 			</div>

@@ -25,7 +25,7 @@
 						
 											<header>
                                             Bids Table
-												<a href="{{route('bids.create')}}" class="btn btn-md btn-primary text-center ml-4">Add Post</a>
+												<a href="{{route('bids.create')}}" class="btn btn-md btn-primary text-center ml-4">Add Bids</a>
                                             </header>
 										</div>
 										<div class="card-body ">

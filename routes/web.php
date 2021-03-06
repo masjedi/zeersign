@@ -24,5 +24,6 @@ Route::group(['namespace'=>'Admin'], function (){
     Route::resource('/gallery','GalleryController');
     Route::resource('/team','TeamController');
     Route::resource('/bids','BidController');
+    Route::resource('/types','TypeController');
 });
 

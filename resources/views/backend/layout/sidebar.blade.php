@@ -12,7 +12,7 @@
 								<div class="user-panel">
 									<div class="row">
 										<div class="sidebar-userpic">
-											<img src="{{asset('assets/img/dp.jpg')}}" class="img-responsive" alt=""> </div>
+											<img src="{{asset('logo.png')}}" style="height:80px; width:100px;" class="img-responsive" alt=""> </div>
 									</div>
 									<div class="profile-usertitle">
 										<div class="sidebar-userpic-name"> POOHA </div>
@@ -53,9 +53,29 @@
 							</li>
 							<li class="nav-item">
 								<a href="{{route('events.index')}}" class="nav-link nav-toggle">
-									<i class="material-icons">business_center</i>
+									<i class="material-icons">local_taxi</i>
 									<span class="title">Events</span>
+									<span class="arrow"></span>
 								</a>
+								<ul class="sub-menu">
+								<li class="nav-item">
+										<a href="{{route('events.index')}}" class="nav-link ">
+											<span class="title">Events List</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="{{route('types.index')}}" class="nav-link ">
+											<span class="title">Add Event Type</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="{{route('events.create')}}" class="nav-link ">
+											<span class="title">Add Event</span>
+										</a>
+									</li>
+									
+									
+								</ul>
 							</li>
 							<li class="nav-item">
 								<a href="{{route('bids.index')}}" class="nav-link nav-toggle">
@@ -86,30 +106,6 @@
 									<i class="material-icons">group</i>
 									<span class="title">Photo Gallery</span>
 								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link nav-toggle">
-									<i class="material-icons">local_taxi</i>
-									<span class="title">Transportation</span>
-									<span class="arrow"></span>
-								</a>
-								<ul class="sub-menu">
-									<li class="nav-item">
-										<a href="add_vehicle.html" class="nav-link ">
-											<span class="title">Add Vehicle Details</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="all_vehicles.html" class="nav-link ">
-											<span class="title">View All Vehicle</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="edit_vehicle.html" class="nav-link ">
-											<span class="title">Edit Vehicle Details</span>
-										</a>
-									</li>
-								</ul>
 							</li>
 							
 								</ul>

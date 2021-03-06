@@ -4,23 +4,20 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCareersTable extends Migration
+class CreateTypesTable extends Migration
 {
     /**
-     * Run the migrations.s
+     * Run the migrations.
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('careers', function (Blueprint $table) {
+        Schema::create('types', function (Blueprint $table) {
             $table->id();
             $table->string('language');
-            $table->string('posted_date');
-            $table->string('closing_date');
-            $table->string('position_type');
-            $table->text('position');
-            $table->longtext('body');
+            $table->string('type');
+
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ class CreateCareersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('careers');
+        Schema::dropIfExists('types');
     }
 }

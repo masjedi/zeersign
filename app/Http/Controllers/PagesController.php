@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Blog;
 use App\Career;
+use App\Type;
+use App\Event;
 class PagesController extends Controller
 {
     private $language;

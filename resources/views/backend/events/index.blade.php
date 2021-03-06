@@ -25,7 +25,7 @@
 						
 											<header>
                                             Event Table
-												<a href="{{route('events.create')}}" class="btn btn-md btn-primary text-center ml-4">Add News</a>
+												<a href="{{route('events.create')}}" class="btn btn-md btn-primary text-center ml-4">Add Event</a>
                                             </header>
 										</div>
 										<div class="card-body ">
