@@ -16,22 +16,14 @@ class EventController extends Controller
         $this->language = \LaravelLocalization::getCurrentLocale() == 'en' ? 'English' : (\LaravelLocalization::getCurrentLocale() === 'ps' ? 'Pashto' :  'Persian');
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $events = Event::where('language',$this->language)->get()->all();
         return view('backend.events.index',compact('events'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         $types = Type::where('language',$this->language)->get()->all();
@@ -51,7 +43,7 @@ class EventController extends Controller
         $destinationPath = public_path().'/img/events';
         $image->move($destinationPath, $fileName);
 
-        $events = new Event(); 
+        $events = new Event();
         $events->language = $request->input('language');
         $events->title = $request->input('title');
         $events->status = $request->input('status');

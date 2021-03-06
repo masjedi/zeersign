@@ -23,21 +23,19 @@
 							<div class="card card-box">
 								<div class="card-head">
 									<header>Add Event</header>
-									
-									
+
+
 								</div>
 								<div class="card-body " id="bar-parent">
 								    <form method="post" action="{{route('events.store')}}" enctype="multipart/form-data">
 									@csrf
-                                    <div class="form-group">
-										<label>Language</label>
-										<select class="form-control" name="language" required>
-											<option value="#" selected disabled>Select language</option>
-											<option value="Pashto">Pashto</option>
-											<option value="Dari">Dari</option>
-											<option value="English">English</option>
-										</select>
-									</div>
+                                        @if(LaravelLocalization::getCurrentLocale()=='en')
+                                            <input type="hidden" name="language" value="English">
+                                        @elseif(LaravelLocalization::getCurrentLocale()=='fa')
+                                            <input type="hidden" name="language" value="Dari">
+                                        @else
+                                            <input type="hidden" name="language" value="Pashto">
+                                        @endif
 									<div class="form-group">
 										<label>Select event's type</label>
 										<select class="form-control" name="type_id" required>
@@ -55,7 +53,7 @@
 											<label for="simpleFormPassword">Status</label>
 											<input type="checkbox" name="status" checked data-toggle="toggle" data-size="md">
                                         </div>
-                                        
+
                                         <label class="body">Description</label>
                                         <div class="form-group">
 											<textarea name="body" id="summernote" cols="30" rows="5"></textarea>
@@ -63,7 +61,7 @@
                                         <label class="for-vanue">Vanue</label>
                                         <div class="form-group">
                                             <textarea class="form-control" rows="6" name="vanue">
-                                            
+
                                             </textarea>
                                         </div>
                                         <div class="form-group">
