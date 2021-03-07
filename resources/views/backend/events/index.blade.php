@@ -54,9 +54,10 @@
 															</style>
 															<input type="checkbox" value="{{$event->status}}" checked data-toggle="toggle" data-style="ios">
 															</td>
-															<td>{{$event->title}}</td>
+															<td>{!!$event->title!!}</td>
 															<td>{!!$event->vanue!!}</td>
-															<td>{{$event->date}}</td>
+															<td>{!!$event->date!!}</td>
+															<td>{!!$types->$eventtype!!}</td>
 															<td>
 																<img src="{{asset('img/events')}}/{{$event->image}}"
 																style="height:80px; width:100px;">

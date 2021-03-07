@@ -23,9 +23,9 @@ class CreateApplicationsTable extends Migration
             $table->text('address');
             $table->integer('age');
             $table->string('attachment');
-            $table->bigInteger('competition_id')->unsigned();
-            $table->foreign('competition_id')->references('id')->on('competitons')->onDelete('cascade');
-           
+            $table->unsignedBigInteger('competition_id');
+            $table->foreign('competition_id')->references('id')->on('competitions')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

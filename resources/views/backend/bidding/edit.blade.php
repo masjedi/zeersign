@@ -28,15 +28,13 @@
 								    <form method="post" action="{{route('bids.update',$bids->id)}}" enctype="multipart/form-data"> 
 									{{method_field('put')}}
                                     @csrf
-                                    <div class="form-group">
-												<label>Language</label>
-												<select class="form-control" name="language" required>
-													<option value="{{$bids->language}}" selected >{{$bids->language}}</option>
-													<option value="Pashto">Pashto</option>
-													<option value="Dari">Dari</option>
-													<option value="English">English</option>
-												</select>
-											</div>
+                                    @if(LaravelLocalization::getCurrentLocale()=='en')
+                                            <input type="hidden" name="language" value="English">
+                                        @elseif(LaravelLocalization::getCurrentLocale()=='fa')
+                                            <input type="hidden" name="language" value="Dari">
+                                        @else
+                                            <input type="hidden" name="language" value="Pashto">
+                                        @endif
 										<div class="row">
 										<div class="form-group col-md-6">
 											<label for="simpleFormPassword">Posted Date</label>

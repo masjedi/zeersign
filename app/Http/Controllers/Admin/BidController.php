@@ -8,9 +8,11 @@ use Alert;
 use App\bid;
 class BidController extends Controller
 {
+    private $language;
     public function __construct()
     {
         $this->middleware('auth');
+        $this->language = \LaravelLocalization::getCurrentLocale() == 'en' ? 'English' : (\LaravelLocalization::getCurrentLocale() === 'ps' ? 'Pashto' :  'Persian');
     }
     
     /**
@@ -20,7 +22,7 @@ class BidController extends Controller
      */
     public function index()
     {
-        $bids = Bid::all();
+        $bids = Bid::where('language', $this->language)->get()->all();
         return view('backend.bidding.index',compact('bids'));
     }
 
