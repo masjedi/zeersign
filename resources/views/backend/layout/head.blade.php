@@ -12,6 +12,8 @@
 	<link href="{{asset('assets/plugins/bootstrap-editable/bootstrap-editable/css/bootstrap-editable.css')}}" rel="stylesheet"
 		type="text/css" />
 	<!--bootstrap -->
+	<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+				
 	<link href="{{asset('assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('assets/plugins/summernote/summernote.css')}}" rel="stylesheet">
 	<!-- morris chart -->

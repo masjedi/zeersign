@@ -45,27 +45,27 @@
 										</select>
 									</div>
 										<div class="form-group">
-											<label for="simpleFormPassword">Title</label>
+											<label for="simpleFormPassword">Event Title</label>
 											<input type="text" name="title" class="form-control" id="simpleFormPassword"
 												placeholder="Enter title">
                                         </div>
 										<div class="form-group">
-											<label for="simpleFormPassword">Status</label>
-											<input type="checkbox" name="status" checked data-toggle="toggle" data-size="md">
+											<label for="simpleFormPassword">Event Subtitle</label>
+											<input type="text" name="sub_title" class="form-control" id="simpleFormPassword"
+												placeholder="Enter subtitle">
                                         </div>
-
-                                        <label class="body">Description</label>
+                                        <label class="body">Event Description</label>
                                         <div class="form-group">
 											<textarea name="body" id="summernote" cols="30" rows="5"></textarea>
                                         </div>
-                                        <label class="for-vanue">Vanue</label>
+                                        <label class="for-vanue">Event Vanue</label>
                                         <div class="form-group">
                                             <textarea class="form-control" rows="6" name="vanue">
 
                                             </textarea>
                                         </div>
                                         <div class="form-group">
-											<label for="simpleFormPassword">Date</label>
+											<label for="simpleFormPassword">Event Date</label>
 											<input type="date" name="date" class="form-control"
 												placeholder="Chose date....">
                                         </div>

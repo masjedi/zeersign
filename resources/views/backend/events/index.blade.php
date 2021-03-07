@@ -3,7 +3,7 @@
 @section('title1','Event Section')
 @section('title2','Event Section')
 <div class="page-content-wrapper">
-				<div class="page-content">
+<div class="page-content">
 					<div class="page-bar">
 						<div class="page-title-breadcrumb">
 							<div class=" pull-left">
@@ -25,20 +25,20 @@
 						
 											<header>
                                             Event Table
-												<a href="{{route('events.create')}}" class="btn btn-md btn-primary text-center ml-4">Add Event</a>
+												<a href="{{route('events.create')}}" class="btn btn-md btn-primary text-center ml-4">Add New Event</a>
                                             </header>
 										</div>
 										<div class="card-body ">
 											<div class="table-scrollable">
 												<table class="table">
 													<thead>
-														<tr class="text-center">
+														<tr>
 															<th>Language</th>
-															<th>Title</th>
-															<th>Subtitle</th>
-															<th>Body</th>
-															<th>Vanue</th>
-															<th>Date</th>
+															<th>Status</th>
+															<th>Event Title</th>
+															<th>Event Vanue</th>
+															<th>Event Date</th>
+															<th>Event Type</th>
 															<th>Image</th>
 															<th>Actions</th>
 														</tr>
@@ -47,12 +47,16 @@
 													@foreach($events as $event)
 														<tr>
 															<td>{{$event->language}}</td>
+															<td>
+															<style>
+															.toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; color:red; }
+															.toggle.ios .toggle-handle { border-radius: 20rem; }
+															</style>
+															<input type="checkbox" value="{{$event->status}}" checked data-toggle="toggle" data-style="ios">
+															</td>
 															<td>{{$event->title}}</td>
-															<td>{{$event->sub_title}}</td>
-															<td>{!!$event->body!!}</td>
 															<td>{!!$event->vanue!!}</td>
 															<td>{{$event->date}}</td>
-															<td>{{$event->image}}</td>
 															<td>
 																<img src="{{asset('img/events')}}/{{$event->image}}"
 																style="height:80px; width:100px;">
@@ -81,7 +85,5 @@
 					
 				</div>
 			</div>
-
-
 
 @stop

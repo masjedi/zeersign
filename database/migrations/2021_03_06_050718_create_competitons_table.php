@@ -15,6 +15,13 @@ class CreateCompetitonsTable extends Migration
     {
         Schema::create('competitons', function (Blueprint $table) {
             $table->id();
+            $table->string('language');
+            $table->string('title');
+            $table->string('image');
+            $table->longtext('body');
+            $table->boolean('status')->default(0);
+            $table->bigInteger('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('competcats')->onDelete('cascade');
             $table->timestamps();
         });
     }

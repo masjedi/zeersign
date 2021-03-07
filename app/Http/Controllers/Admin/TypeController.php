@@ -9,14 +9,17 @@ use App\Type;
 use App\Event;
 class TypeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
+    private $language;
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->language = \LaravelLocalization::getCurrentLocale() == 'en' ? 'English' : (\LaravelLocalization::getCurrentLocale() === 'ps' ? 'Pashto' :  'Persian');
+    }
+    
     public function index()
     {
-        $types = Type::all();
+        $types = Type::where('language',$this->language)->get()->all();
         return view('backend.types.index',compact('types'));
     }
 

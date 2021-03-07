@@ -15,6 +15,8 @@ class CreateCompetcatsTable extends Migration
     {
         Schema::create('competcats', function (Blueprint $table) {
             $table->id();
+            $table->string('language');
+            $table->string('name');
             $table->timestamps();
         });
     }

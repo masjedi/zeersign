@@ -8,6 +8,8 @@
 	<script src="{{asset('assets/plugins/sparkline/jquery.sparkline.min.js')}}"></script>
 	<script src="{{asset('assets/js/pages/sparkline/sparkline-data.js')}}"></script>
 	<!-- Common js-->
+	
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 	<script src="{{asset('assets/js/app.js')}}"></script>
 	<script src="{{asset('assets/js/layout.js')}}"></script>
 	<script src="{{asset('assets/js/theme-color.js')}}"></script>

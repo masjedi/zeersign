@@ -15,6 +15,17 @@ class CreateApplicationsTable extends Migration
     {
         Schema::create('applications', function (Blueprint $table) {
             $table->id();
+            $table->string('language');
+            $table->string('name');
+            $table->string('email');
+            $table->integer('phone');
+            $table->string('education');
+            $table->text('address');
+            $table->integer('age');
+            $table->string('attachment');
+            $table->bigInteger('competition_id')->unsigned();
+            $table->foreign('competition_id')->references('id')->on('competitons')->onDelete('cascade');
+           
             $table->timestamps();
         });
     }
