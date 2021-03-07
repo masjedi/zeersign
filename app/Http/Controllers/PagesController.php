@@ -15,72 +15,69 @@ class PagesController extends Controller
     public function __construct()
     {
         $this->language = \LaravelLocalization::getCurrentLocale() == 'en' ? 'English' : (\LaravelLocalization::getCurrentLocale() === 'ps' ? 'Pashto' :  'Persian');
-
-
     }
 
     public function index(){
-        $blogs = Blog::where('language',$this->language)->get()->take(3);
-        $careers = Career::where('language',$this->language)->get()->take(4);
-         return view('frontend.index',compact('blogs','careers'));
+
+         return view('index');
      }
      public function product_details($title)
      {
          $product1 = Product::where('title',$title)->get();
-         return view('frontend.product',compact('product1'));
+         return view('front.product',compact('product1'));
      }
- 
+
      public function single_service($id)
      {
           $services = Service::where('id',$id)->get();
          //$products = Product::where('language',$this->language)->get();
-         return view('frontend.service_details',compact('services'));
+         return view('front.service_details',compact('services'));
      }
- 
- 
- 
+
+
+
      public function services()
      {
- 
+
          $services = Service::where('language',$this->language)->get();
-          return view('frontend.serviceslist',compact('services'));
+          return view('front.serviceslist',compact('services'));
      }
- 
- 
+
+
      public function about(){
-         return view('frontend.about');
+         return view('front.about');
      }
- 
+
      public function about_us()
      {
-         return view('frontend.about_us');
+         return view('front.about_us');
      }
- 
+
      public function donate()
      {
-         return view('frontend.donate');
+         return view('front.donate');
      }
- 
+
      public function gallery(){
          $galleries = Gallery::all();
-         return view('frontend.gallery',compact('galleries'));
+         return view('front.gallery',compact('galleries'));
      }
- 
+
      public function video(){
          $videos = Video::all();
-         return view('frontend.videos',compact('videos'));
+         return view('front.videos',compact('videos'));
      }
- 
+
      public function contact(){
-         return view('frontend.contact');
+         return view('front.contact');
  }
- 
+
  public function form(Request $request)
      {
          $this->validate($request, [
              'email' => 'required|email',
          ]);
- 
+
          $data = array(
              'email' => $request->email
          );
@@ -88,8 +85,8 @@ class PagesController extends Controller
          \Session::flash('message', 'Thanks for your message we will get back to you soon..');
          return back()->with('success', 'Thanks for contacting us!');
      }
- 
- 
+
+
 
 
 

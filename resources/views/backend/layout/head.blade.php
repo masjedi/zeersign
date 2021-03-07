@@ -39,7 +39,7 @@
 <style>
 
  card-box{
-	 direction:ritl!important;
+	 direction:rtl!important;
 	 text-align:right;
  }
 </style>

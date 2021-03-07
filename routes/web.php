@@ -29,12 +29,7 @@ Route::group(
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
-	/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-
-    Route::get('contactus','PagesController@contact');
-    Route::get('aboutus','PagesController@about_us');
-    Route::get('/','PagesController@index');
-    Route::get('donation','PagesController@donate');
+	Route::get('/','PagesController@index');
 });
 
 
