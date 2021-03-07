@@ -30,15 +30,13 @@
 								    <form method="post" action="{{route('news.update',$blogs->id)}}" enctype="multipart/form-data"> 
 									{{method_field('put')}}
                                     @csrf
-                                    <div class="form-group">
-												<label>Language</label>
-												<select class="form-control" name="language" required="on">
-													<option value="{{$blogs->language}}" selected >{{$blogs->language}}</option>
-													<option value="Pashto">Pashto</option>
-													<option value="Dari">Dari</option>
-													<option value="English">English</option>
-												</select>   
-											</div>
+                                    @if(LaravelLocalization::getCurrentLocale()=='en')
+                                            <input type="hidden" name="language" value="English">
+                                        @elseif(LaravelLocalization::getCurrentLocale()=='fa')
+                                            <input type="hidden" name="language" value="Dari">
+                                        @else
+                                            <input type="hidden" name="language" value="Pashto">
+                                        @endif
 										<div class="form-group">
 											<label for="simpleFormPassword">Title</label>
 											<input type="text"  value="{{$blogs->title}}" name="title" class="form-control" id="simpleFormPassword"

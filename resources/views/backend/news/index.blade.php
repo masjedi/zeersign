@@ -36,7 +36,6 @@
 															<th>Language</th>
 															<th>Title</th>
 															<th>Subtitle</th>
-															<th>Body</th>
 															<th>Image</th>
 															<th>Actions</th>
 														</tr>
@@ -47,7 +46,6 @@
 															<td>{{$blog->language}}</td>
 															<td>{{$blog->title}}</td>
 															<td>{{$blog->sub_title}}</td>
-															<td>{!!$blog->body!!}</td>
                                                             <td>
 																<img src="{{asset('img/blog')}}/{{$blog->image}}"
 																style="height:80px; width:100px;">

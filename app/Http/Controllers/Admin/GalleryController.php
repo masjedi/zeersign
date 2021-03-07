@@ -9,9 +9,11 @@ use Illuminate\Http\Request;
 
 class GalleryController extends Controller
 {
+    private $language;
     public function __construct()
     {
         $this->middleware('auth');
+        $this->language = \LaravelLocalization::getCurrentLocale() == 'en' ? 'English' : (\LaravelLocalization::getCurrentLocale() === 'ps' ? 'Pashto' :  'Persian');
     }
     
     /**
@@ -21,7 +23,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $galleries = Gallery::all();
+        $galleries = Gallery::where('language', $this->language)->get()->all();
         return view('backend.gallery.index',compact('galleries'));
     }
 
@@ -55,7 +57,8 @@ class GalleryController extends Controller
         $galleries->language = $request->input('language');
         $galleries->title = $request->input('title');
         $galleries->save();
-        return redirect('/gallery');
+        Alert::success('Added!','Submitted with success.');
+        return redirect()->route('gallery.index');
     }
 
     /**
@@ -112,6 +115,7 @@ class GalleryController extends Controller
            
         }
         $galleries->delete();
+        Alert::error('Deleted!','Deleted successfully.');
         return redirect()->back();
     }
 }

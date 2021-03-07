@@ -8,9 +8,11 @@ use Alert;
 use App\Career;
 class CareerController extends Controller
 {
+    private $language;
     public function __construct()
     {
         $this->middleware('auth');
+        $this->language = \LaravelLocalization::getCurrentLocale() == 'en' ? 'English' : (\LaravelLocalization::getCurrentLocale() === 'ps' ? 'Pashto' :  'Persian');
     }
     /**
      * Display a listing of the resource.
@@ -19,7 +21,7 @@ class CareerController extends Controller
      */
     public function index()
     {
-        $careers = Career::all();
+        $careers = Career::where('language', $this->language)->get()->all();
         return view('backend.career.index',compact('careers'));
     }
 

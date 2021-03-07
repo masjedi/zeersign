@@ -19,14 +19,41 @@
 					</div>
 					<!-- start widget -->
 					<div class="row">
-								<div class="col-sm-12 col-md-12 m-auto">
+					<div class="col-md-6 col-sm-12 ">
+							<div class="card card-box">
+								<div class="card-head">
+									<header>Add Events Type</header>
+									
+									
+								</div>
+								<div class="card-body " id="bar-parent">
+								    <form method="post" action="{{route('types.store')}}" enctype="multipart/form-data"> 
+									@csrf
+									
+                                        @if(LaravelLocalization::getCurrentLocale()=='en')
+                                            <input type="hidden" name="language" value="English">
+                                        @elseif(LaravelLocalization::getCurrentLocale()=='fa')
+                                            <input type="hidden" name="language" value="Dari">
+                                        @else
+                                            <input type="hidden" name="language" value="Pashto">
+                                        @endif
+                                    	<div class="form-group">
+											<label for="simpleFormPassword">Type of Event</label>
+											<input type="text" name="type" class="form-control" id="simpleFormPassword"
+												placeholder="Enter title">
+                                        </div>
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</form>
+								</div>
+							</div>
+						</div>
+								<div class="col-sm-12 col-md-6 m-auto">
 									<div class="card card-topline-aqua">
 										<div class="card-head">
 						
 											<header>
                                             Events Types Table
-												<a href="{{route('types.create')}}" class="btn btn-md btn-primary text-center ml-4">Add Event Type</a>
-                                            </header>
+											</header>
 										</div>
 										<div class="card-body ">
 											<div class="table-scrollable">

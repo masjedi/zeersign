@@ -30,15 +30,13 @@
 								    <form method="post" action="{{route('events.update',$events->id)}}" enctype="multipart/form-data"> 
 									{{method_field('put')}}
                                     @csrf
-                                    <div class="form-group">
-												<label>Language</label>
-												<select class="form-control" name="language" required>
-													<option value="{{$events->language}}" selected >{{$events->language}}</option>
-													<option value="Pasto">Pashto</option>
-													<option value="Dari">Dari</option>
-													<option value="English">English</option>
-												</select>   
-											</div>
+									@if(LaravelLocalization::getCurrentLocale()=='en')
+                                            <input type="hidden" name="language" value="English">
+                                        @elseif(LaravelLocalization::getCurrentLocale()=='fa')
+                                            <input type="hidden" name="language" value="Dari">
+                                        @else
+                                            <input type="hidden" name="language" value="Pashto">
+                                        @endif
 										<div class="form-group">
 											<label for="simpleFormPassword">Title</label>
 											<input type="text"  value="{{$events->title}}" name="title" class="form-control" id="simpleFormPassword"

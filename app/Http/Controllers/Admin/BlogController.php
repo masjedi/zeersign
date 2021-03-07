@@ -8,9 +8,11 @@ use Alert;
 use App\Blog;
 class BlogController extends Controller
 {
+    private $language;
     public function __construct()
     {
         $this->middleware('auth');
+        $this->language = \LaravelLocalization::getCurrentLocale() == 'en' ? 'English' : (\LaravelLocalization::getCurrentLocale() === 'ps' ? 'Pashto' :  'Persian');
     }
     
     /**
@@ -20,7 +22,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::all();
+        $blogs = Blog::where('language', $this->language)->get()->all();
         return view('backend.news.index',compact('blogs'));
     }
 

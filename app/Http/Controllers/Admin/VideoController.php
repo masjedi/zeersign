@@ -8,9 +8,11 @@ use Alert;
 use App\Video;
 class VideoController extends Controller
 {
+    private $language;
     public function __construct()
     {
         $this->middleware('auth');
+        $this->language = \LaravelLocalization::getCurrentLocale() == 'en' ? 'English' : (\LaravelLocalization::getCurrentLocale() === 'ps' ? 'Pashto' :  'Persian');
     }
     
     /**
@@ -20,7 +22,7 @@ class VideoController extends Controller
      */
     public function index()
     {
-        $videos = Video::all();
+        $vidoes = Video::where('language', $this->language)->get()->all();
         return view('backend.videos.index',compact('videos'));
     }
 
@@ -53,7 +55,7 @@ class VideoController extends Controller
         //$video->image = $fileName;
         $videos->save();
         Alert::success('Superb!','Added successfully!');
-        return redirect()->to('videos');
+        return redirect()->route('videos.index');
     }
 
     /**
@@ -95,7 +97,7 @@ class VideoController extends Controller
 
         $video->save();
         Alert::success('Awesome!','Updated successfully!');
-        return redirect()->to('videos');
+        return redirect()->route('videos.index');
     }
 
     /**
@@ -110,6 +112,6 @@ class VideoController extends Controller
         $videos = Video::findOrFail($id);
         $videos->delete();
         Alert::error('Deleted!','You just deleted a video!');
-        return redirect()->to('/videos');
+        return redirect()->route('videos.index');
     }
 }

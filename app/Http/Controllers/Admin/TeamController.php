@@ -13,14 +13,16 @@ class TeamController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    private $language;
     public function __construct()
     {
         $this->middleware('auth');
+        $this->language = \LaravelLocalization::getCurrentLocale() == 'en' ? 'English' : (\LaravelLocalization::getCurrentLocale() === 'ps' ? 'Pashto' :  'Persian');
     }
 
     public function index()
     {
-        $members = Team::all();
+        $members = Team::where('language', $this->language)->get()->all();
         return view('backend.team.index',compact('members'));
     }
 

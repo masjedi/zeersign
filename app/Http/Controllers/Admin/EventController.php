@@ -19,8 +19,9 @@ class EventController extends Controller
 
     public function index()
     {
+        $types = Type::where('language',$this->language)->get()->type;
         $events = Event::where('language',$this->language)->get()->all();
-        return view('backend.events.index',compact('events'));
+        return view('backend.events.index',compact('events','types'));
     }
 
 
@@ -46,7 +47,7 @@ class EventController extends Controller
         $events = new Event();
         $events->language = $request->input('language');
         $events->title = $request->input('title');
-        $events->status = $request->input('status');
+        $events->sub_title = $request->input('sub_title');
         $events->type_id = $request->input('type_id');
         $events->body = $request->input('body');
         $events->vanue = $request->input('vanue');
