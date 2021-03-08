@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- BEGIN HEAD -->
-
-
-<!-- Mirrored from radixtouch.in/templates/admin/hotel/source/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Sep 2020 10:43:09 GMT -->
 @include('backend.layout.head')
 <!-- END HEAD -->
 
@@ -18,8 +15,8 @@
 			<!-- start sidebar menu -->
 			@include('backend.layout.sidebar')
             @section('main-content')
-            
-            
+
+
             @show
 		</div>
 		<!-- end page container -->
@@ -30,6 +27,9 @@
     <!-- start js include path -->
     @include('backend.layout.scripts')
 	@include('sweetalert::alert')
-	<!-- end js include path -->
+
+@section('scripts')
+
+    @show
 </body>
 </html>

@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     protected $table = "events";
-    
-    public function types(){
+
+    public function type(){
         return $this->belongsTo(Type::class);
     }
 }

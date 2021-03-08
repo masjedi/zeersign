@@ -20,8 +20,10 @@ Route::group(
     Route::resource('/team','TeamController');
     Route::resource('/bids','BidController');
     Route::resource('/types','TypeController');
+
 });
 
+Route::post('change-status', 'Admin\EventController@ChangeStatus');
 
 
 
@@ -30,6 +32,7 @@ Route::group(
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
 	Route::get('/','PagesController@index');
+
 });
 
 

@@ -19,16 +19,21 @@
 							<li class="nav-item">
 								<a href="{{route('news.index')}}" class="nav-link nav-toggle">
 									<i class="material-icons">email</i>
-									<span class="title">News</span>
+									<span class="title">Manage News / Blog</span>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a href="{{route('events.index')}}" class="nav-link nav-toggle">
 									<i class="material-icons">local_taxi</i>
-									<span class="title">Events</span>
+									<span class="title">Manage Events</span>
 									<span class="arrow"></span>
 								</a>
 								<ul class="sub-menu">
+                                    <li class="nav-item">
+                                        <a href="{{route('events.create')}}" class="nav-link ">
+                                            <span class="title">Add New Event</span>
+                                        </a>
+                                    </li>
 								<li class="nav-item">
 										<a href="{{route('events.index')}}" class="nav-link ">
 											<span class="title">Events List</span>
@@ -36,22 +41,15 @@
 									</li>
 									<li class="nav-item">
 										<a href="{{route('types.index')}}" class="nav-link ">
-											<span class="title">Add Event Type</span>
+											<span class="title">Manage Event Types</span>
 										</a>
 									</li>
-									<li class="nav-item">
-										<a href="{{route('events.create')}}" class="nav-link ">
-											<span class="title">Add Event</span>
-										</a>
-									</li>
-
-
 								</ul>
 							</li>
 							<li class="nav-item">
 								<a href="{{route('bids.index')}}" class="nav-link nav-toggle">
 									<i class="material-icons">business_center</i>
-									<span class="title">Biddings</span>
+									<span class="title">Manage Bids</span>
 								</a>
 							</li>
 							<li class="nav-item">
@@ -63,7 +61,7 @@
 							<li class="nav-item">
 								<a href="{{route('careers.index')}}" class="nav-link nav-toggle">
 									<i class="material-icons">vpn_key</i>
-									<span class="title">Careers</span>
+									<span class="title">Manage Careers</span>
 								</a>
 							</li>
 							<li class="nav-item">
@@ -77,9 +75,6 @@
 									<i class="material-icons">group</i>
 									<span class="title">Photo Gallery</span>
 								</a>
-							</li>
-
-								</ul>
 							</li>
 						</ul>
 					</div>
