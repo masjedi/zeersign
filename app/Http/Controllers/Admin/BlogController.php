@@ -130,6 +130,6 @@ class BlogController extends Controller
 
         $blogs->delete();
         Alert::error('Deleted!','You just deleted a post!');
-        return redirect()->to('/news');
+        return redirect()->route('news.index');
     }
 }

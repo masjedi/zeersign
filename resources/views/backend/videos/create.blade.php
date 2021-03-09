@@ -39,14 +39,18 @@
 										<div class="form-group">
 											<label for="simpleFormPassword">Title</label>
 											<input type="text" name="title" class="form-control" id="simpleFormPassword"
-												placeholder="Enter video title">
+												placeholder="Enter video title" required="">
                                         </div>
 										<div class="form-group">
 											<label for="simpleFormPassword">Video Link</label>
 											<input type="text" name="v_link" class="form-control" id="simpleFormPassword"
-												placeholder="Enter video link from youtube">
+												placeholder="Enter video link from youtube" required="">
                                         </div>
+									<div class="card-footer">
+										<center>
 										<button type="submit" class="btn btn-primary">Submit</button>
+										</center>
+									</div>
 									</form>
 								</div>
 							</div>

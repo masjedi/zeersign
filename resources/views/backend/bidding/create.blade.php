@@ -21,8 +21,8 @@
                     <div class="row">
 						<div class="col-md-8 col-sm-12 m-auto">
 							<div class="card card-box">
-								<div class="card-head">
-									<header>Add Bids</header>
+								<div class="card-header">
+									<strong>Add Bids</strong>
 								</div>
 								<div class="card-body " id="bar-parent">
 								    <form method="post" action="{{route('bids.store')}}" enctype="multipart/form-data"> 
@@ -38,27 +38,31 @@
 										<div class="form-group col-md-6">
 											<label for="simpleFormPassword">Posted Date</label>
 											<input type="date" name="posted_date" class="form-control" id="simpleFormPassword"
-												placeholder="Enter date">
+												placeholder="Enter date" required="">
                                         </div>
 
 										<div class="form-group col-md-6">
 											<label for="simpleFormPassword">Closing Date</label>
 											<input type="date" name="closing_date" class="form-control" id="simpleFormPassword"
-												placeholder="Enter closing date">
+												placeholder="Enter closing date" required="">
                                         </div>
                                     </div>
 										<div class="form-group">
 											<label for="simpleFormPassword">Title</label>
 											<input type="text" name="title" class="form-control" id="simpleFormPassword"
-												placeholder="Enter title">
+												placeholder="Enter title" required="">
                                         </div>
 
                                         <label class="body">Description</label>
                                         <div class="form-group">
-											<textarea name="body" id="summernote" cols="30" rows="10"></textarea>
+											<textarea name="body" id="summernote" cols="30" rows="10" required=""></textarea>
 										</div>
-										
+									<div class="card-footer">
+										<center>
+
 										<button type="submit" class="btn btn-primary mb-4">Submit</button>
+										</center>
+									</div>
 									</form>
 								</div>
 							</div>

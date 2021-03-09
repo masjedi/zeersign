@@ -1,7 +1,7 @@
 @extends('backend.layout.master')
 @section('main-content')
-@section('title1','Add New Event')
-@section('title2','Add New Event')
+@section('title1','Competitions Section')
+@section('title2','Competitions Section')
 <div class="page-content-wrapper">
 				<div class="page-content">
 					<div class="page-bar">
@@ -22,9 +22,9 @@
 						<div class="col-md-8 col-sm-12 offset-2">
 							<div class="card card-box">
 								<div class="card-header">
-									<strong>Add New Event</strong>
+									<strong>Add New Competition</strong>
 								</div>
-                                <form method="post" action="{{route('events.store')}}" enctype="multipart/form-data">
+                                <form method="post" action="{{route('competitions.store')}}" enctype="multipart/form-data">
 								<div class="card-body " id="bar-parent">
 									@csrf
 
@@ -36,42 +36,32 @@
                                             <input type="hidden" name="language" value="Pashto">
                                         @endif
 									<div class="form-group">
-										<label>Select Event Type</label>
+										<label>Select competition category</label>
 										<select class="form-control" name="type_id" required>
-                                            <option value="" selected disabled>Select Event Type</option>
-										@foreach($types as $tp)
-											<option value="{{$tp->id}}">{{$tp->type}}</option>
+                                            <option value="" selected disabled>Select competition category</option>
+										@foreach($category as $cats)
+											<option value="{{$cats->id}}">{{$cats->name}}</option>
 										@endforeach
 										</select>
 									</div>
 								<div class="row">
 										<div class="form-group col-md-6">
-											<label for="simpleFormPassword">Event Title</label>
+											<label for="simpleFormPassword">Competition Title</label>
 											<input type="text" name="title" class="form-control" id="simpleFormPassword"
-												placeholder="Enter Title">
-                                        </div>
-										<div class="form-group col-md-6 ">
-											<label for="simpleFormPassword">Event Subtitle</label>
-											<input type="text" name="sub_title" class="form-control" id="simpleFormPassword"
-												placeholder="Enter Subtitle">
+												placeholder="Competition Title">
                                         </div>
                                         <div class="form-group col-md-6 ">
-                                            <label for="simpleFormPassword">Event Date</label>
+                                            <label for="simpleFormPassword">Competitions Date</label>
                                             <input type="date" name="date" class="form-control"
                                                    placeholder="Chose date....">
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="simpleFormPassword">Event Venue</label>
-                                            <input type="text" name="vanue" class="form-control"
-                                                   placeholder="Enter Event Venue">
-                                        </div>
 									</div>
-                                        <label class="body">Event Description</label>
+                                        <label class="body">ompetition Description</label>
                                         <div class="form-group">
 											<textarea name="body" id="summernote" cols="30" rows="5"></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label class="image">Event Banner</label>
+                                            <label class="image">Competition Banner</label>
                                             <input type="file" class="form-control" name="image">
                                         </div>
 

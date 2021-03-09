@@ -22,7 +22,7 @@ class VideoController extends Controller
      */
     public function index()
     {
-        $vidoes = Video::where('language', $this->language)->get()->all();
+        $videos = Video::where('language', $this->language)->get()->all();
         return view('backend.videos.index',compact('videos'));
     }
 

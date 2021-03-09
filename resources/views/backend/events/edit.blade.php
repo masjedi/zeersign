@@ -37,6 +37,7 @@
                                         @else
                                             <input type="hidden" name="language" value="Pashto">
                                         @endif
+										
 										<div class="form-group">
 											<label for="simpleFormPassword">Title</label>
 											<input type="text"  value="{{$events->title}}" name="title" class="form-control" id="simpleFormPassword"

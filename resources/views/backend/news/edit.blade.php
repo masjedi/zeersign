@@ -21,8 +21,8 @@
                     <div class="row">
 						<div class="col-md-8 col-sm-12 offset-2">
 							<div class="card card-box">
-								<div class="card-head">
-									<header>Edit News</header>
+								<div class="card-header">
+									<strong>Edit News</strong>
 									
 									
 								</div>
@@ -57,7 +57,11 @@
                                             <label class="image"></label>
                                             <input type="file" class="form=control" value="{{asset('img/blog')}}/{{$blogs->image}}" require>
                                         </div>
-										<button type="submit" class="btn btn-primary">Submit</button>
+									<div class="card-footer">
+										<center>
+											<button type="submit" class="btn btn-primary">Submit</button>
+										</center>
+									</div>
 									</form>
 								</div>
 							</div>

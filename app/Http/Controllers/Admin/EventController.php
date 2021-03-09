@@ -46,7 +46,7 @@ class EventController extends Controller
         $events = new Event();
         $events->language = $request->input('language');
         $events->title = $request->input('title');
-        $events->subtitle = $request->input('subtitle');
+        $events->sub_title = $request->input('sub_title');
         $events->type_id = $request->input('type_id');
         $events->body = $request->input('body');
         $events->vanue = $request->input('vanue');
@@ -92,8 +92,6 @@ class EventController extends Controller
         $events = Event::findOrFail($id);
         $events->language = $request->input('language');
         $events->title = $request->input('title');
-        $events->status = $request->input('status');
-        $events->type_id = $request->input('type_id');
         $events->body = $request->input('body');
         $events->vanue = $request->input('vanue');
         $events->date = $request->input('date');
@@ -121,16 +119,16 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
-        $members = Event::findOrfail($id);
-        $image_path = public_path()."/img/team/".$members->image;  // Value is not URL but directory file path
+        $events = Event::findOrfail($id);
+        $image_path = public_path()."/img/team/".$events->image;  // Value is not URL but directory file path
        // dd($image_path);
         if(File::exists($image_path)) {
             File::delete($image_path);
         }
 
-        $members->delete();
+        $events->delete();
         Alert::error('Deleted!','You just deleted a post!');
-        return redirect()->to('/team');
+        return redirect()->route('events.index');
     }
 
     public function ChangeStatus(Request $request)

@@ -49,6 +49,7 @@ class CareerController extends Controller
         $careers->posted_date = $request->input('posted_date');
         $careers->closing_date = $request->input('closing_date');
         $careers->position = $request->input('position');
+        $careers->position_type = $request->input('position_type');
         $careers->body = $request->input('body');
         $careers->save();
         Alert::success('Superb!','Added successfully!');
@@ -92,6 +93,7 @@ class CareerController extends Controller
         $careers->posted_date = $request->input('posted_date');
         $careers->closing_date = $request->input('closing_date');
         $careers->position = $request->input('position');
+        $careers->position_type = $request->input('position_type');
         $careers->body = $request->input('body');
         $careers->save();
         Alert::success('Update!','Updated successfully!');

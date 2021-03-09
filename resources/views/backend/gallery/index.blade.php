@@ -1,4 +1,11 @@
 @extends('backend.layout.master')
+@section('head-section')
+<style>
+	.line-form{
+		display:inline-block!important;
+	}
+</style>
+@endsection
 @section('main-content')
 @section('title1','Photo Gallery')
 @section('title2','Photo Gallery')
@@ -21,12 +28,12 @@
 					<div class="row">
 								<div class="col-sm-12 col-md-12">
 									<div class="card card-topline-aqua">
-										<div class="card-head">
+										<div class="card-header">
 						
-											<header>
+											<strong>
                                             Gallery Table
-												<a href="{{route('gallery.create')}}" class="btn btn-md btn-primary text-center ml-4">Add Photo</a>
-                                            </header>
+												<a href="{{route('gallery.create')}}" class="btn btn-md btn-primary float-right">Add Photo</a>
+                                            </strong>
 										</div>
 										<div class="card-body ">
 											<div class="table-scrollable">
@@ -53,10 +60,10 @@
                                                             @endforeach
 															</td>
                                                             <td class="m-auto">
-                                                                <form action="{{route('gallery.destroy',$gallery->id)}}" method="post">
+                                                                <form action="{{route('gallery.destroy',$gallery->id)}}" method="post" class="inline-form">
                                                                     {{csrf_field()}}
                                                                     {{method_field('delete')}}
-                                                            <button class="btn btn-danger btn-sm" type="submit"><i class="fa fa-trash"></i></button>
+                                                            <button class="btn btn-danger btn-xs inline-form" type="submit"><i class="fa fa-trash"></i></button>
                                                                     
                                                                 </form>
                                                             </td>

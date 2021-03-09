@@ -21,8 +21,8 @@
                     <div class="row">
 						<div class="col-md-8 col-sm-12 offset-2">
 							<div class="card card-box">
-								<div class="card-head">
-									<header>Add New Member</header>
+								<div class="card-header">
+									<strong>Add New Member</strong>
 									
 									
 								</div>
@@ -40,45 +40,49 @@
 										<div class="form-group col-md-12">
 											<label for="simpleFormPassword">Name</label>
 											<input type="text" name="name" class="form-control" id="simpleFormPassword"
-												placeholder="Enter title">
+												placeholder="Enter name..." required="">
                                         </div>
 									</div>
 									<div class="row">
 										<div class="form-group col-md-6">
 											<label for="simpleFormPassword">Positon</label>
 											<input type="text" name="position" class="form-control" id="simpleFormPassword"
-												placeholder="Enter subtitle">
+												placeholder="Enter position..."  required="">
                                         </div>
 
 									
 										<div class="form-group col-md-6">
 											<label for="simpleFormPassword">Twitter</label>
 											<input type="text" name="twitter" class="form-control" id="simpleFormPassword"
-												placeholder="Enter subtitle">
+												placeholder="Enter twitter link"  required="">
                                         </div>
 									</div>
 									<div class="row">
 										<div class="form-group col-md-6">
 											<label for="simpleFormPassword">Facebook</label>
 											<input type="text" name="facebook" class="form-control" id="simpleFormPassword"
-												placeholder="Enter subtitle">
+												placeholder="Enter facebook link"  required="">
                                         </div>
 										<div class="form-group col-md-6">
 											<label for="simpleFormPassword">Linkedin</label>
 											<input type="text" name="linkedin" class="form-control" id="simpleFormPassword"
-												placeholder="Enter subtitle">
+												placeholder="Enter linkedin link"  required="">
                                         </div>
 									</div>
 										
                                         <label class="body">Member's Bio</label>
                                         <div class="form-group">
-										<textarea name="bio" id="summernote" cols="30" rows="10"></textarea>
+										<textarea name="bio" id="summernote"  required="" cols="30" rows="10"></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="image"></label>
-                                            <input type="file" class="form=control" name="image">
+                                            <input type="file" class="form=control" name="image"  required="">
                                         </div>
-										<button type="submit" class="btn btn-primary">Submit</button>
+										<div class="card-footer">
+											<center>
+											<button type="submit" class="btn btn-primary">Submit</button>
+											</center>
+										</div>
 									</form>
 								</div>
 							</div>

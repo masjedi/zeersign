@@ -1,14 +1,17 @@
 @extends('backend.layout.master')
 @section('head-section')
-	<style>
-        .inline-form{
-            display: inline-block!important;
-        }
-    </style>
+
+<style>
+	.inline-form{
+		display:inline-block!important;
+
+	}
+</style>
+
 @endsection
 @section('main-content')
-@section('title1','Types of Events')
-@section('title2','Types of Events')
+@section('title1','Competitions Categories')
+@section('title2','Competitions Categories')
 <div class="page-content-wrapper">
 				<div class="page-content">
 					<div class="page-bar">
@@ -33,8 +36,8 @@
 									
 									
 								</div>
+								<form method="post" action="{{route('categories.store')}}" enctype="multipart/form-data"> 
 								<div class="card-body " id="bar-parent">
-								    <form method="post" action="{{route('types.store')}}" enctype="multipart/form-data"> 
 									@csrf
 									
                                         @if(LaravelLocalization::getCurrentLocale()=='en')
@@ -46,14 +49,14 @@
                                         @endif
                                     	<div class="form-group">
 											<label for="simpleFormPassword">Type of Event</label>
-											<input type="text" name="type" class="form-control" id="simpleFormPassword"
-												placeholder="Enter title" required="on">
+											<input type="text" name="name" class="form-control" id="simpleFormPassword"
+												placeholder="Enter title"  required="">
                                         </div>
-								<div class="card-footer">
-									<center>
+									<div class="card-footer">
+										<center>
 										<button type="submit" class="btn btn-primary">Submit</button>
-									</center>
-								</div>
+										</center>
+									</div>
 									</form>
 								</div>
 							</div>
@@ -63,30 +66,30 @@
 										<div class="card-head">
 						
 											<header>
-                                            Events Types Table
+                                            Competirions Categories Table
 											</header>
 										</div>
 										<div class="card-body ">
 											<div class="table-scrollable">
-												<table class="table table-border">
+												<table class="table table-striped custom-table table-hover table-bordered">
 													<thead>
 														<tr class="text-center">
 															<th>Language</th>
-															<th>Type</th>
+															<th>Category</th>
 															<th>Actions</th>
 														</tr>
 													</thead>
 													<tbody>
-													@foreach($types as $tp)
+													@foreach($category as $cats)
 														<tr class="text-center">
-															<td>{{$tp->language}}</td>
-															<td>{{$tp->type}}</td>
+															<td>{{$cats->language}}</td>
+															<td>{{$cats->name}}</td>
                                                             <td>
-                                                                <a href="{{route('types.edit',$tp->id)}}">
+                                                                <a href="{{route('categories.edit',$cats->id)}}">
 																<button class="btn btn-success btn-sm my-2"><i class="fa fa-edit"></i>
 																</button>
                                                             	</a>
-                                                                <form action="{{route('types.destroy',$tp->id)}}" method="post">
+                                                                <form action="{{route('categories.destroy',$cats->id)}}" method="post">
                                                                     {{csrf_field()}}
                                                                     {{method_field('delete')}}
                                                             		<button class="btn btn-danger btn-sm" type="submit"><i class="fa fa-trash"></i></button>

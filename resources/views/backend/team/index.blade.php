@@ -1,4 +1,11 @@
 @extends('backend.layout.master')
+@section('head-section')
+    <style>
+        .inline-form{
+            display: inline-block!important;
+        }
+    </style>
+@endsection
 @section('main-content')
 @section('title1','Team Section')
 @section('title2','Team Section')
@@ -21,12 +28,12 @@
 					<div class="row">
 								<div class="col-sm-12 col-md-12">
 									<div class="card card-topline-aqua">
-										<div class="card-head">
+										<div class="card-header">
 						
-											<header>
+											<strong>
                                             Team Table
-												<a href="{{route('team.create')}}" class="btn btn-md btn-primary text-center ml-4">Add New Member</a>
-                                            </header>
+												<a href="{{route('team.create')}}" class="btn btn-md btn-primary float-right">Add New Member</a>
+                                            </strong>
 										</div>
 										<div class="card-body ">
 											<div class="table-scrollable">
