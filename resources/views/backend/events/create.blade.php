@@ -72,7 +72,6 @@
                                             <label class="image">Event Banner</label>
                                             <input type="file" class="form-control" name="image">
                                         </div>
-
 								</div>
                               <div class="card-footer">
                                   <center>

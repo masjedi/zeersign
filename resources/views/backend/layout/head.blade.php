@@ -37,7 +37,7 @@
 
 @section('head-section')
 
-    @show
+@show
 @if(\LaravelLocalization::getCurrentLocaleDirection() == 'rtl')
 
 <style>

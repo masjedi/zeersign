@@ -30,8 +30,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-12">
                 <div class="card card-topline-aqua">
-                    <div class="card-header
-">
+                    <div class="card-header">
                         <div class="row">
                             <div class="col-md-6">
                                 <strong>Events List</strong>
@@ -95,7 +94,6 @@
 @section('scripts')
 
     <script>
-
         $(function() {
             $('.toggle-class').change(function() {
                 var status = $(this).prop('checked') == true ? 1 : 0;
