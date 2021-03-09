@@ -20,10 +20,13 @@ Route::group(
     Route::resource('/team','TeamController');
     Route::resource('/bids','BidController');
     Route::resource('/types','TypeController');
+    Route::resource('/categories','CategoryController');
+    Route::resource('/competitions','CompetitionsController');
 
 });
 
 Route::post('change-status', 'Admin\EventController@ChangeStatus');
+Route::post('status-change', 'Admin\CompetitionsController@StatusChange');
 
 
 

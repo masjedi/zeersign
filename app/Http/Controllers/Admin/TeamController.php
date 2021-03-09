@@ -136,6 +136,6 @@ class TeamController extends Controller
 
         $members->delete();
         Alert::error('Deleted!','You just deleted a post!');
-        return redirect()->to('/team');
+        return redirect()->route('team.index');
     }
 }

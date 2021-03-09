@@ -1,4 +1,11 @@
 @extends('backend.layout.master')
+@section('head-section')
+	<style>
+		.inline-form{
+			display:inline-form!important;
+		}
+	</style>
+@endsection
 @section('main-content')
 @section('title1','Video Gallery')
 @section('title2','Video Gallery')
@@ -21,16 +28,16 @@
 					<div class="row">
 								<div class="col-sm-12 col-md-12">
 									<div class="card card-topline-aqua">
-										<div class="card-head">
+										<div class="card-header">
 						
-											<header>
+											<strong>
                                             Video Gallery
-												<a href="{{route('videos.create')}}" class="btn btn-md btn-primary text-center ml-4">Add Video</a>
-                                            </header>
+                                            </strong>
+												<a href="{{route('videos.create')}}" class="btn btn-md btn-primary float-right">Add Video</a>
 										</div>
 										<div class="card-body ">
 											<div class="table-scrollable">
-												<table class="table">
+												<table class="table table-striped custom-table table-hover table-bordered">
 													<thead>
 														<tr>
 															<th>language</th>
@@ -48,12 +55,12 @@
 															<td>{{$video->v_link}}</td>
 															
 															<td class="m-auto">
-																	<a href="{{route('videos.edit',$video->id)}}"><button class="btn btn-success btn-sm my-2"><i class="fa fa-edit"></i>
+																	<a href="{{route('videos.edit',$video->id)}}"><button class="btn btn-success btn-xs inline-form"><i class="fa fa-edit"></i>
 																</button></a>
-																	<form action="{{route('videos.destroy',$video->id)}}" method="post">
+																	<form action="{{route('videos.destroy',$video->id)}}" method="post" class="inline-form">
 																		{{csrf_field()}}
 																		{{method_field('delete')}}
-																		<button class="btn btn-danger btn-sm" type="submit"><i class="fa fa-trash"></i></button>
+																		<button class="btn btn-danger btn-xs inline-form" type="submit"><i class="fa fa-trash"></i></button>
 																		
 																	</form>
 															</td>

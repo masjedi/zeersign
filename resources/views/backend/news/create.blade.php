@@ -22,7 +22,7 @@
 						<div class="col-md-8 col-sm-12 offset-2">
 							<div class="card card-box">
 								<div class="card-head">
-									<header>Add Post</header>
+									<header>Add New Post</header>
 									
 									
 								</div>
@@ -37,24 +37,30 @@
                                             <input type="hidden" name="language" value="Pashto">
                                         @endif
 										<div class="form-group">
-											<label for="simpleFormPassword">Title</label>
+											<label for="simpleFormPassword">Post Title</label>
 											<input type="text" name="title" class="form-control" id="simpleFormPassword"
-												placeholder="Enter title">
+												placeholder="Enter title" required="">
                                         </div>
 										<div class="form-group">
-											<label for="simpleFormPassword">Subtitle</label>
+											<label for="simpleFormPassword">Post Subtitle</label>
 											<input type="text" name="sub_title" class="form-control" id="simpleFormPassword"
-												placeholder="Enter subtitle">
+												placeholder="Enter subtitle" required="">
                                         </div>
-                                        <label class="body">Description</label>
+                                        <label class="body">Post Description</label>
                                         <div class="form-group">
-										<textarea name="body" id="summernote" cols="30" rows="10"></textarea>
+										<textarea name="body" id="summernote" required="" cols="30" rows="10"></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="image"></label>
-                                            <input type="file" class="form=control" name="image">
+                                            <input type="file" class="form=control" name="image" required="">
                                         </div>
-										<button type="submit" class="btn btn-primary">Submit</button>
+
+										<div class="card-footer">
+											<center>
+											<button type="submit" class="btn btn-primary">Submit</button>
+
+											</center>
+										</div>
 									</form>
 								</div>
 							</div>

@@ -10,7 +10,7 @@
 							</li>
 
 							<li class="nav-item start active">
-								<a href="{{url('dashboard')}}" class="nav-link nav-toggle">
+								<a href="{{route('dashboard')}}" class="nav-link nav-toggle">
 									<i class="material-icons">dashboard</i>
 									<span class="title">Dashboard</span>
 									<span class="selected"></span>
@@ -20,6 +20,18 @@
 								<a href="{{route('news.index')}}" class="nav-link nav-toggle">
 									<i class="material-icons">email</i>
 									<span class="title">Manage News / Blog</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="{{route('bids.index')}}" class="nav-link nav-toggle">
+									<i class="material-icons">business_center</i>
+									<span class="title">Manage Bids</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="{{route('careers.index')}}" class="nav-link nav-toggle">
+									<i class="material-icons">vpn_key</i>
+									<span class="title">Manage Careers</span>
 								</a>
 							</li>
 							<li class="nav-item">
@@ -47,23 +59,37 @@
 								</ul>
 							</li>
 							<li class="nav-item">
-								<a href="{{route('bids.index')}}" class="nav-link nav-toggle">
-									<i class="material-icons">business_center</i>
-									<span class="title">Manage Bids</span>
+								<a href="{{route('competitions.index')}}" class="nav-link nav-toggle">
+									<i class="material-icons">local_taxi</i>
+									<span class="title">Manage Competitions</span>
+									<span class="arrow"></span>
 								</a>
+								<ul class="sub-menu">
+                                    <li class="nav-item">
+                                        <a href="{{route('competitions.create')}}" class="nav-link ">
+                                            <span class="title">Add New Competition</span>
+                                        </a>
+                                    </li>
+								<li class="nav-item">
+										<a href="{{route('competitions.index')}}" class="nav-link ">
+											<span class="title">Competitions List</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="{{route('categories.index')}}" class="nav-link ">
+											<span class="title">Manage Competitions Categories</span>
+										</a>
+									</li>
+								</ul>
 							</li>
+							
 							<li class="nav-item">
 								<a href="{{route('team.index')}}" class="nav-link nav-toggle">
 									<i class="material-icons">business_center</i>
 									<span class="title">Team Members</span>
 								</a>
 							</li>
-							<li class="nav-item">
-								<a href="{{route('careers.index')}}" class="nav-link nav-toggle">
-									<i class="material-icons">vpn_key</i>
-									<span class="title">Manage Careers</span>
-								</a>
-							</li>
+							
 							<li class="nav-item">
 								<a href="{{route('videos.index')}}" class="nav-link nav-toggle">
 									<i class="material-icons">group</i>

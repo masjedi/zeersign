@@ -111,6 +111,6 @@ class BidController extends Controller
         $bids = Bid::findOrFail($id);
         $bids->delete();
         Alert::error('Deleted!','You just deleted a post!');
-        return redirect()->to('/bids');
+        return redirect()->route('bids.index');
     }
 }

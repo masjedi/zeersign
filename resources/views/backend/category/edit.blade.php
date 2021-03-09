@@ -1,7 +1,7 @@
 @extends('backend.layout.master')
 @section('main-content')
-@section('title1','Photo Gallery')
-@section('title2','Photo Gallery')
+@section('title1','Competitions Categories Section')
+@section('title2','Competitions Categories Section')
 <div class="page-content-wrapper">
 				<div class="page-content">
 					<div class="page-bar">
@@ -22,14 +22,15 @@
 						<div class="col-md-8 col-sm-12 offset-2">
 							<div class="card card-box">
 								<div class="card-header">
-									<strong>Add Images</strong>
+									<header>Edit Category Type</header>
 									
 									
 								</div>
 								<div class="card-body " id="bar-parent">
-								    <form method="post" action="{{route('gallery.store')}}" enctype="multipart/form-data"> 
+								    <form method="post" action="{{route('categories.update',$category->id)}}" enctype="multipart/form-data"> 
+									{{method_field('put')}}
 									@csrf
-									@if(LaravelLocalization::getCurrentLocale()=='en')
+                                    @if(LaravelLocalization::getCurrentLocale()=='en')
                                             <input type="hidden" name="language" value="English">
                                         @elseif(LaravelLocalization::getCurrentLocale()=='fa')
                                             <input type="hidden" name="language" value="Dari">
@@ -37,19 +38,11 @@
                                             <input type="hidden" name="language" value="Pashto">
                                         @endif
 										<div class="form-group">
-											<label for="simpleFormPassword">Title</label>
-											<input type="text" name="title" class="form-control" id="simpleFormPassword"
-												placeholder="Enter title" required="">
+											<label for="simpleFormPassword">Type of Event</label>
+											<input type="text" name="type" value="{{$category->type}}" class="form-control" id="simpleFormPassword"
+												placeholder="Enter title">
                                         </div>
-                                        <div class="form-group">
-                                            <label class="image"></label>
-                                            <input type="file" class="form=control" name="image[]" multiple required="">
-                                        </div>
-										<div class="card-footer">
-										<center>
 										<button type="submit" class="btn btn-primary">Submit</button>
-										</center>
-										</div>
 									</form>
 								</div>
 							</div>

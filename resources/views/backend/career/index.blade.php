@@ -1,4 +1,11 @@
 @extends('backend.layout.master')
+@section('head-section')
+    <style>
+        .inline-form{
+            display: inline-block!important;
+        }
+    </style>
+@endsection
 @section('main-content')
 @section('title1','Career Section')
 @section('title2','Career Section')
@@ -50,7 +57,7 @@
 														<td>{{$career->position}}</td>
 														<td>{!!$career->body!!}</td>
                                                         
-                                                            <td class="m-auto">
+                                                            <td>
                                                                 <a href="{{route('careers.edit',$career->id)}}"><button class="btn btn-success btn-sm my-2"><i class="fa fa-edit"></i>
                                                             </button></a>
                                                                 <form action="{{route('careers.destroy',$career->id)}}" method="post">
