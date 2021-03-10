@@ -29,30 +29,30 @@
 								<div class="col-sm-12 col-md-12">
 									<div class="card card-topline-aqua">
 										<div class="card-header">
-						
+
                                            <strong> Bids Table</strong>
 												<a href="{{route('bids.create')}}" class="btn btn-md btn-primary float-right">Add Bids</a>
-                                            
+
 										</div>
 										<div class="card-body ">
 											<div class="table-scrollable">
-												<table class="table">
+												<table class="table table-striped custom-table table-hover table-bordered">
 													<thead>
 														<tr>
-															<th>Language</th>
-															<th>Posted Date</th>
+                                                            <th>Title</th>
+                                                            <th>Posted Date</th>
 															<th>Closing Date</th>
-															<th>Title</th>
+															<th>Bid Documents </th>
 															<th>Actions</th>
 														</tr>
 													</thead>
 													<tbody>
 													@foreach($bids as $bid)
 														<tr>
-															<td>{{$bid->language}}</td>
-															<td>{{$bid->posted_date}}</td>
+                                                            <td>{{$bid->title}}</td>
+                                                            <td>{{$bid->posted_date}}</td>
 															<td>{{$bid->closing_date}}</td>
-															<td>{{$bid->title}}</td>
+                                                            <td>{{$bid->file}}</td>
 															<td >
 															<a  class="btn btn-primary btn-xs inline-form" href="{{route('bids.edit',$bid->id)}}">
 																<i class="fa fa-pencil"></i>
@@ -73,7 +73,7 @@
 									</div>
 								</div>
 							</div>
-					
+
 				</div>
 			</div>
 

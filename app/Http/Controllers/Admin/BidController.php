@@ -14,43 +14,34 @@ class BidController extends Controller
         $this->middleware('auth');
         $this->language = \LaravelLocalization::getCurrentLocale() == 'en' ? 'English' : (\LaravelLocalization::getCurrentLocale() === 'ps' ? 'Pashto' :  'Persian');
     }
-    
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $bids = Bid::where('language', $this->language)->get()->all();
         return view('backend.bidding.index',compact('bids'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view('backend.bidding.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
+        $image = $request->file('file');
+        $fileName = time().'_'.$image->getClientOriginalName();
+        $destinationPath = public_path().'/pdfs';
+        $image->move($destinationPath, $fileName);
+
         $bids = new Bid;
         $bids->language = $request->input('language');
         $bids->posted_date = $request->input('posted_date');
         $bids->closing_date = $request->input('closing_date');
         $bids->title = $request->input('title');
         $bids->body = $request->input('body');
-
+        $bids->file = $fileName;
         $bids->save();
         Alert::success('Supertb','Added with success!');
         return redirect()->route('bids.index');
@@ -79,13 +70,7 @@ class BidController extends Controller
         return view('backend.bidding.edit',compact('bids',$id));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
         $bids = Bid::findOrFail($id);
@@ -94,21 +79,30 @@ class BidController extends Controller
         $bids->closing_date = $request->input('closing_date');
         $bids->title = $request->input('title');
         $bids->body = $request->input('body');
-
+        if ( $request->hasFile('file')){
+            $blogs = $request->file('file');
+            $fileName = time().'_'.$blogs->getClientOriginalName();
+            $destinationPath = public_path().'/pdfs';
+            if (File::exists($destinationPath)){
+                File::delete($destinationPath);
+            }
+            $blogs->move($destinationPath, $fileName);
+            $bids->image = $fileName;
+        }
         $bids->save();
         Alert::success('Updated','Updated with success!');
         return redirect()->route('bids.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
         $bids = Bid::findOrFail($id);
+        $image_path = public_path()."/pdfs/".$bids->file;  // Value is not URL but directory file path
+        // dd($image_path);
+        if(File::exists($image_path)) {
+            File::delete($image_path);
+        }
         $bids->delete();
         Alert::error('Deleted!','You just deleted a post!');
         return redirect()->route('bids.index');

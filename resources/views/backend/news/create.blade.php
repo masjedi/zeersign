@@ -11,7 +11,7 @@
 							</div>
 							<ol class="breadcrumb page-breadcrumb pull-right">
 								<li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
-										href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+										href="{{url('admin/dashboard')}}">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
 								</li>
 								<li class="active">@yield('title2')</li>
 							</ol>
@@ -23,11 +23,11 @@
 							<div class="card card-box">
 								<div class="card-head">
 									<header>Add New Post</header>
-									
-									
+
+
 								</div>
 								<div class="card-body " id="bar-parent">
-								    <form method="post" action="{{route('news.store')}}" enctype="multipart/form-data"> 
+								    <form method="post" action="{{route('news.store')}}" enctype="multipart/form-data">
 									@csrf
                                     @if(LaravelLocalization::getCurrentLocale()=='en')
                                             <input type="hidden" name="language" value="English">
@@ -46,13 +46,18 @@
 											<input type="text" name="sub_title" class="form-control" id="simpleFormPassword"
 												placeholder="Enter subtitle" required="">
                                         </div>
+                                        <div class="form-group">
+                                            <label for="simpleFormPassword">Publish Date</label>
+                                            <input type="date" name="date" class="form-control" id="simpleFormPassword"
+                                                   placeholder="Publish Date" required>
+                                        </div>
                                         <label class="body">Post Description</label>
                                         <div class="form-group">
 										<textarea name="body" id="summernote" required="" cols="30" rows="10"></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label class="image"></label>
-                                            <input type="file" class="form=control" name="image" required="">
+                                            <label class="image">Feature Image</label>
+                                            <input type="file" class="form-control" name="image" required="">
                                         </div>
 
 										<div class="card-footer">

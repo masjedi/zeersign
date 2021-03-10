@@ -41,7 +41,21 @@ class CompetitionsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $image = $request->file('image');
+        $fileName = time().'_'.$image->getClientOriginalName();
+        $destinationPath = public_path().'/img/competitions';
+        $image->move($destinationPath, $fileName);
+
+        $competitions = new Competition;
+        $competitions->language = $request->input('language');
+        $competitions->title = $request->input('title');
+        $competitions->body = $request->input('body');
+        $competitions->date = $request->input('date');
+        $competitions->competcat_id = $request->input('type_id');
+        $competitions->image=$fileName;
+        $competitions->save();
+        Alert::success('Inserted!','Inserted with success.');
+        return redirect()->route('competitions.index');
     }
 
     /**
@@ -52,22 +66,7 @@ class CompetitionsController extends Controller
      */
     public function show($id)
     {
-        $image = $request->file('image');
-        $fileName = time().'_'.$image->getClientOriginalName();
-        $destinationPath = public_path().'/img/competitions';
-        $image->move($destinationPath, $fileName);
 
-        $competitions = new Competition;
-        $competitions->language = $request->input('language');
-        $competitions->title = $request->input('title');
-        $competitions->status = $request->input('status');
-        $competitions->body = $request->input('body');
-        $competitions->date = $request->input('date');
-        $competitions->image=$fileName;
-
-        $competitions->save();
-        Alert::success('Inserted!','Inseted with success.');
-        return redirect()->route('competitions.index');
     }
 
     /**
@@ -94,18 +93,18 @@ class CompetitionsController extends Controller
         $competitions = Competition::findOrFail($id);
         $competitions->language = $request->input('language');
         $competitions->title = $request->input('title');
-        $competitions->status = $request->input('status');
+        $competitions->competcat_id = $request->input('type_id');
         $competitions->body = $request->input('body');
         $competitions->date = $request->input('date');
 
         if ( $request->hasFile('image')){
             $events = $request->file('image');
-            $fileName = time().'_'.$file->getClientOriginalName();
+            $fileName = time().'_'.$events->getClientOriginalName();
             $destinationPath = public_path().'/img/competitions';
             if (File::exists($destinationPath)){
                 File::delete($destinationPath);
             }
-            $image->move($destinationPath, $fileName);
+            $events->move($destinationPath, $fileName);
             $competitions->image = $fileName;
         }
         $competitions->save();
@@ -113,12 +112,7 @@ class CompetitionsController extends Controller
         return redirect()->route('competitions.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
         $competitions = Competition::findOrfail($id);
@@ -133,9 +127,9 @@ class CompetitionsController extends Controller
         return redirect()->route('competitions.index');
     }
 
-    public function ChangeStatus(Request $request)
+    public function StatusChange(Request $request)
     {
-        $competitions = Competition::findOrFail($request->category_id);
+        $competitions = Competition::findOrFail($request->compet_id);
         $competitions->status = $request->status;
         $competitions->save();
         return response()->json(['success'=>'Status change successfully.']);

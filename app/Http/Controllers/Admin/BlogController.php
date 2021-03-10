@@ -14,34 +14,20 @@ class BlogController extends Controller
         $this->middleware('auth');
         $this->language = \LaravelLocalization::getCurrentLocale() == 'en' ? 'English' : (\LaravelLocalization::getCurrentLocale() === 'ps' ? 'Pashto' :  'Persian');
     }
-    
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+
     public function index()
     {
         $blogs = Blog::where('language', $this->language)->get()->all();
         return view('backend.news.index',compact('blogs'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('backend.news.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         $image = $request->file('image');
@@ -49,11 +35,12 @@ class BlogController extends Controller
         $destinationPath = public_path().'/img/blog';
         $image->move($destinationPath, $fileName);
 
-        $blogs = new Blog(); 
+        $blogs = new Blog();
         $blogs->language = $request->input('language');
         $blogs->title = $request->input('title');
         $blogs->sub_title = $request->input('sub_title');
         $blogs->body = $request->input('body');
+        $blogs->date = $request->input('date');
         $blogs->image = $fileName;
         $blogs->save();
         Alert::success('Superb!','Added successfully!');
@@ -68,7 +55,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        
+
     }
 
     /**
@@ -97,15 +84,17 @@ class BlogController extends Controller
         $blogs->title = $request->input('title');
         $blogs->sub_title = $request->input('sub_title');
         $blogs->body = $request->input('body');
+        $blogs->date = $request->input('date');
+
 
         if ( $request->hasFile('image')){
             $blogs = $request->file('image');
-            $fileName = time().'_'.$file->getClientOriginalName();
+            $fileName = time().'_'.$blogs->getClientOriginalName();
             $destinationPath = public_path().'/img/blog';
             if (File::exists($destinationPath)){
                 File::delete($destinationPath);
             }
-            $image->move($destinationPath, $fileName);
+            $blogs->move($destinationPath, $fileName);
             $blogs->image = $fileName;
         }
         $blogs->save();
@@ -113,12 +102,7 @@ class BlogController extends Controller
         return redirect()->route('news.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
         $blogs = Blog::findOrfail($id);
