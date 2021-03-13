@@ -1,193 +1,126 @@
 <header id="rs-header" class="rs-header">
-        <!-- Topbar Area Start -->
-        <div class="topbar-area">
-            <div class="container">
-                <div class="row y-middle">
-                    <div class="col-md-7">
-                        <ul class="topbar-contact">
-                            <li>
-                                <i class="flaticon-email"></i>
-                                <a href="mailto:support@rstheme.com">info@pooha.org</a>
-                            </li>
-                            <li>
-                                <i class="flaticon-call"></i>
-                                <a href="tel:+9378888978">(+93) 788202020</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-5 text-right">
-                        <ul class="topbar-right">
-                            <li class="login-register">
-                                <i class="fa fa-sign-in"></i>
-                                <a href="login.html">Login</a>/<a href="register.html">Register</a>
-                            </li>
-                            <li class="btn-part">
-                                <a class="apply-btn" href="#"><i class="flaticon-heart"></i> Donate Us</a>
-                            </li>
-                        </ul>
-                    </div>
+    <!-- Topbar Area Start -->
+    <div class="topbar-area">
+        <div class="container">
+            <div class="row y-middle">
+                <div class="col-md-7">
+                    <ul class="topbar-contact">
+                        <li>
+                            <i class="flaticon-email"></i>
+                            <a href="mailto:support@rstheme.com">info@pooha.org</a>
+                        </li>
+                        <li>
+                            <i class="flaticon-call"></i>
+                            <a href="tel:+9378888978">(+93) 788202020</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-5 text-right">
+                    <ul class="topbar-right">
+                        <li class="login-register">
+                            <i class="fa fa-sign-in"></i>
+                            <a href="login.html">Login</a>/<a href="register.html">Register</a>
+                        </li>
+                        <li class="btn-part" >
+                            <a style="background-color: #FFCC05" class="apply-btn" href="#"> Donate Us <i class="fa fa-heart"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!-- Topbar Area End -->
+    </div>
+    <!-- Topbar Area End -->
 
-        <!-- Menu Start -->
-        <div class="menu-area menu-sticky">
-            <div class="container">
-                <div class="row y-middle">
-                    <div class="col-lg-3">
-                        <div class="logo-cat-wrap">
-                            <div class="logo-part pr-90">
-                                <a class="dark-logo" href="/">
-                                    <img src="{{asset('front/assets/logo.png')}}" alt="">
-                                </a>
-                                <a class="light-logo" href="/">
-                                    <img src="{{asset('white-logo.png')}}" alt="">
+    <!-- Menu Start -->
+    <div class="menu-area menu-sticky">
+        <div class="container">
+            <div class="row y-middle">
+                <div class="col-lg-2">
+                    <div class="logo-cat-wrap">
+                        <div class="logo-part pr-90">
+                            <a class="dark-logo" href="/">
+                                <img src="{{asset('logo.png')}}" alt="">
+                            </a>
+                            <a class="light-logo" href="/">
+                                <img src="{{asset('white-logo.png')}}" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-10 text-left">
+                    <div class="rs-menu-area">
+                        <div class="main-menu pr-90">
+                            <div class="mobile-menu">
+                                <a class="rs-menu-toggle">
+                                    <i class="fa fa-bars"></i>
                                 </a>
                             </div>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-9 text-left">
-                        <div class="rs-menu-area">
-                            <div class="main-menu">
-                                <nav class="rs-menu">
-                                    <ul class="nav-menu">
-                                        <li class=" current-menu-item"> <a href="{{url('/')}}">Home</a></li>
-
-                                        <li class="menu-item-has-children">
-                                            <a href="{{url('about')}}">About</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="{{url('overview')}}">Overview</a> </li>
-                                                <li><a href="{{url('whoweare')}}">Who we are</a> </li>
-                                                <li><a href="{{url('whatwedo')}}">What we do</a> </li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Events & Workshops</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="course.html">workshop for youths</a> </li>
-                                                <li><a href="course2.html">International Leadership</a> </li>
-                                                <li><a href="course3.html">Events</a> </li>
-                                                <li><a href="course4.html">Youths Cpacity Building</a>
-                                                </li>
-                                                <li><a href="course5.html">Courses Five</a> </li>
-                                                <li><a href="course-single.html">Courses Single</a> </li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Women Support</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="course.html">Support Afghan Women Startups & Business</a> </li>
-                                                <li><a href="course2.html">Women Power Events</a> </li>
-                                                <li><a href="course3.html">Events</a> </li>
-                                                <li><a href="course4.html">Youths Cpacity Building</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">opportunities</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="course.html">Computations</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="course4.html">Painting</a>
-                                                    <li><a href="course4.html">Photography</a>
-                                                    <li><a href="course4.html">Videos</a>
-                                                    <li><a href="course4.html">Environmental</a>
-                                                    <li><a href="course4.html">Call for Concepts</a>
+                            <nav class="rs-menu">
+                                <ul class="nav-menu">
+                                    <li class=" "> <a href="/">Home</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">About Us <i class="fa fa-caret-down"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="about.html">Overview</a> </li>
+                                            <li><a href="about2.html">Who We Are</a> </li>
+                                            <li><a href="about2.html">What We Do</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">Events & Workshops <i class="fa fa-caret-down"></i></a>
+                                        <ul class="sub-menu">
+                                            @foreach($types as $type)
+                                                <li><a href="course.html">{{$type->type}}</a> </li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">Women Empowerment <i class="fa fa-caret-down"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="course.html">Support afghan women Start ups and businesses</a> </li>
+                                            <li><a href="course.html">Women Power Events</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">Opportunities <i class="fa fa-caret-down"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="course.html"><i class="fa fa-caret-right"></i> Competitions </a>
+                                                <ul class="sub-menu right">
+                                                    @foreach($comcats as $cat)
+                                                        <li><a href="blog-left.html">{{$cat->name}}</a></li>
+                                                    @endforeach
                                                 </ul>
                                             </li>
-                                                <li><a href="course2.html">Online Free Courses</a> </li>
-                                                <li><a href="course3.html">Online Conferences</a> </li>
-                                                <li><a href="course4.html">Join us as a Vulanteer</a>
-                                                <li><a href="course4.html">Internship</a>
-                                                <li><a href="course4.html">Vacancies/Jobs</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Pages</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item-has-children right">
-                                                    <a href="#">Team</a>
-                                                    <ul class="sub-menu right">
-                                                        <li><a href="team.html">Team One</a></li>
-                                                        <li><a href="team2.html">Team Two</a></li>
-                                                        <li><a href="team-single.html">Team Single</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Event</a>
-                                                    <ul class="sub-menu right">
-                                                        <li><a href="events-style1.html">Event One</a></li>
-                                                        <li><a href="events-style2.html">Event Two</a></li>
-                                                        <li><a href="events-style3.html">Event Three</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Gallery</a>
-                                                    <ul class="sub-menu right">
-                                                        <li><a href="gallery-style1.html">Gallery One</a></li>
-                                                        <li><a href="gallery-style2.html">Gallery Two</a></li>
-                                                        <li><a href="gallery-style3.html">Gallery Three</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Shop</a>
-                                                    <ul class="sub-menu right">
-                                                        <li><a href="shop.html">Shop</a></li>
-                                                        <li><a href="shop-single.html">Shop Single</a></li>
-                                                        <li><a href="cart.html">Cart</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Others</a>
-                                                    <ul class="sub-menu right">
-                                                        <li><a href="faq.html">FAQ</a></li>
-                                                        <li><a href="error.html">404 Page</a></li>
-                                                        <li><a href="login.html">Login</a></li>
-                                                        <li><a href="register.html">Register</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                            <li><a href="course.html"><i class="fa fa-caret-right"></i> Career</a>
+                                                <ul class="sub-menu right">
+                                                    <li><a href="blog-left.html">Vacancies</a></li>
+                                                    <li><a href="blog-right.html">Internship</a></li>
+                                                    <li><a href="blog-right.html">Become a Volunteer</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="course.html">RFPs/RFQs</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="#">Contact Us</a></li>
+                                </ul> <!-- //.nav-menu -->
+                            </nav>
+                        </div> <!-- //.main-menu -->
+                        <div class="expand-btn-inner">
+                            <ul>
+                                <li>
+                                    <a class="hidden-xs rs-search short-border" data-target=".search-modal" data-toggle="modal" href="#">
+                                        <i class="flaticon-search"></i>
+                                    </a>
+                                </li>
+                            </ul>
 
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Blog Sidebar</a>
-                                                    <ul class="sub-menu right">
-                                                        <li><a href="blog-left.html">Blog Left Sidebar</a></li>
-                                                        <li><a href="blog-right.html">Blog Right Sidebar</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Single Post</a>
-                                                    <ul class="sub-menu right">
-                                                        <li><a href="blog-post-left.html">Post Left Sidebar</a></li>
-                                                        <li><a href="blog-post-right.html">Post Right Sidebar</a></li>
-                                                        <li><a href="blog-single.html">Full Width Post</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="menu-item-has-children">
-                                            <a href="{{url('contact')}}">Contact</a>
-                                    
-                                        </li>
-                                    </ul> <!-- //.nav-menu -->
-                                </nav>
-                            </div> <!-- //.main-menu -->
-                           
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Menu End -->
-    </header>
+    </div>
+    <!-- Menu End -->
+
+</header>
