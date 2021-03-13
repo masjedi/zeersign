@@ -1,4 +1,14 @@
-
+/**
+*
+* -----------------------------------------------------------------------------
+*
+* Template : Educavo - Education HTML Template
+* Author : rs-theme
+* Author URI : http://www.rstheme.com/
+*
+* -----------------------------------------------------------------------------
+*
+**/
 (function($) {
 	"use strict";
     // sticky menu
@@ -21,7 +31,7 @@
         });
 
     });
-
+	
     //window load
    $(window).on( 'load', function() {
         $("#loading").delay(1500).fadeOut(500);
@@ -44,7 +54,7 @@
                $(".showhide").trigger("click");
            }
        });
-
+       
        if ($.fn.onePageNav) {
            $(".nav-menu").onePageNav({
                currentClass: "active-menu"
@@ -75,21 +85,21 @@
             focusOnSelect: true,
         });
     }
-
-    // collapse hidden
+ 
+    // collapse hidden  
      var navMain = $(".navbar-collapse");
      navMain.on("click", "a:not([data-toggle])", null, function () {
          navMain.collapse('hide');
-     });
+     });  
 
-    // video
+    // video 
     if ($('.player').length) {
         $(".player").YTPlayer();
     }
 
     // wow init
     new WOW().init();
-
+    
     // image loaded portfolio init
     var gridfilter = $('.grid');
         if(gridfilter.length){
@@ -108,8 +118,8 @@
                 }
             });
         });
-    }
-
+    }   
+        
     // project Filter
     if ($('.gridFilter button').length) {
         var projectfiler = $('.gridFilter button');
@@ -121,7 +131,7 @@
             });
         }
     }
-
+    
     // magnificPopup init
     var imagepopup = $('.image-popup');
     if(imagepopup.length){
@@ -158,13 +168,13 @@
             }
         });
     }
-
+    
     //preloader
     $(window).on('load', function() {
         $("#loader").delay(1000).fadeOut(500);
     })
 
-    //Videos popup jQuery
+    //Videos popup jQuery 
     var popupvideos = $('.popup-videos');
     if(popupvideos.length){
         $('.popup-videos').magnificPopup({
@@ -174,9 +184,9 @@
             removalDelay: 160,
             preloader: false,
             fixedContentPos: false
-        });
+        }); 
     }
-
+    
     /*-------------------------------------
         OwlCarousel
     -------------------------------------*/
@@ -250,28 +260,28 @@
         });
     });
 
-    // Skill bar
+    // Skill bar 
     var skillbar = $('.skillbar');
     if(skillbar.length) {
-        $('.skillbar').skillBars({
-            from: 0,
-            speed: 4000,
-            interval: 100,
-            decimals: 0,
+        $('.skillbar').skillBars({  
+            from: 0,    
+            speed: 4000,    
+            interval: 100,  
+            decimals: 0,    
         });
     }
-
+		
     // Counter Up
     var counter = $('.rs-count');
-    if(counter.length) {
+    if(counter.length) {  
         $('.rs-count').counterUp({
             delay: 20,
             time: 1500
         });
     }
-
-    // scrollTop init
-    var totop = $('#scrollUp');
+    
+    // scrollTop init	
+    var totop = $('#scrollUp');    
     win.on('scroll', function() {
         if (win.scrollTop() > 150) {
             totop.fadeIn();
@@ -311,8 +321,8 @@
         e.preventDefault();
         $('.rs-popular-courses').addClass('list-view');
     });
-
-
+    
+	
 	/*----------------------------
     single-productjs active
     ------------------------------ */
@@ -348,7 +358,7 @@
                     slidesToShow: 2
                   }
                 }
-              ]
+              ] 
         });
     }
 
@@ -362,6 +372,6 @@
     if(tilt.length) {
         const tilt = $('.js-tilt').tilt();
     }
-
+    
 
 })(jQuery);
