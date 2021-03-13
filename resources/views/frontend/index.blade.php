@@ -95,9 +95,10 @@
     <!-- Services Section End -->
 
     <!-- About Section Start -->
-    <div id="rs-about" class="rs-about style2 pt-94 pb-100 md-pt-64 md-pb-70">
+    <div id="rs-about" class="rs-about style1 pb-100 md-pb-70">
         <div class="container">
             <div class="row">
+<<<<<<< HEAD:resources/views/frontend/index.blade.php
                 <div class="col-lg-5 pr-65 md-pr-15 md-mb-50">
                     <div class="about-intro">
                         <div class="sec-title mb-40 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">
@@ -111,38 +112,49 @@ society for life. </div>
                         <div class="btn-part wow fadeInUp" data-wow-delay="400ms" data-wow-duration="2000ms">
                             <a class="readon2" href="#">Read More</a>
                         </div>
+=======
+                <div class="col-lg-4 order-last">
+                    <div class="notice-bord style1">
+                        <h4 class="title">Notice Board</h4>
+                        <ul>
+                            <li class="wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 300ms; animation-name: fadeInUp;">
+                                <div class="date"><span>20</span>June</div>
+                                <div class="desc">Lorem Ipsum is simply dummy text of the printing and setting</div>
+                            </li>
+                            <li class="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 400ms; animation-name: fadeInUp;">
+                                <div class="date"><span>22</span>Aug</div>
+                                <div class="desc">Lorem Ipsum is simply dummy text of the printing and setting</div>
+                            </li>
+                            <li class="wow fadeInUp" data-wow-delay="500ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 500ms; animation-name: fadeInUp;">
+                                <div class="date"><span>14</span>May</div>
+                                <div class="desc">Lorem Ipsum is simply dummy text of the printing and setting</div>
+                            </li>
+                            <li class="wow fadeInUp" data-wow-delay="600ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 600ms; animation-name: fadeInUp;">
+                                <div class="date"><span>31</span>Sept</div>
+                                <div class="desc">Lorem Ipsum is simply dummy text of the printing and setting</div>
+                            </li>
+                            <li class="wow fadeInUp" data-wow-delay="700ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 700ms; animation-name: fadeInUp;">
+                                <div class="date"><span>28</span>Oct</div>
+                                <div class="desc">Lorem Ipsum is simply dummy text of the printing and setting</div>
+                            </li>
+                        </ul>
+>>>>>>> 5aa779eef45ab43d1cf2f945d2d13c24b667d82c:resources/views/index.blade.php
                     </div>
                 </div>
-                <div class="col-lg-7 lg-pl-0 ml--25 md-ml-0">
-                    <div class="row rs-counter couter-area mb-40">
-                        <div class="col-md-4">
-                            <div class="counter-item one">
-                                <h2 class="number rs-count kplus">2</h2>
-                                <h4 class="title mb-0">Students</h4>
-                            </div>
+                <div class="col-lg-8 pr-50 md-pr-15">
+                    <div class="about-part">
+                        <div class="sec-title mb-40">
+                            <div class="sub-title primary wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 300ms; animation-name: fadeInUp;">About Us</div>
+                            <h2 class="title wow fadeInUp" data-wow-delay="400ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 400ms; animation-name: fadeInUp;">World Best Virtual Learning Network Educavo eLearning</h2>
+                            <div class="desc wow fadeInUp" data-wow-delay="500ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 500ms; animation-name: fadeInUp;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, eius to mod tempor incidi dunt ut labore et dolore magna aliqua. Ut enims ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipisicing elit, eius to mod tempor incidi dunt ut labore et dolore magna aliqua. Ut enims ad minim veniam.Lorem sum dolor sit amet, consectetur adipisicing.</div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="counter-item two">
-                                <h2 class="number rs-count">3.50</h2>
-                                <h4 class="title mb-0">Average CGPA</h4>
+                        <div class="sign-part wow fadeInUp" data-wow-delay="600ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 600ms; animation-name: fadeInUp;">
+                            <div class="img-part">
+                                <img src="assets/images/about/ceo.png" alt="CEO Image">
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="counter-item three">
-                                <h2 class="number rs-count percent">95</h2>
-                                <h4 class="title mb-0">Graduates</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row grid-area">
-                        <div class="col-md-6 sm-mb-30">
-                            <div class="image-grid">
-                                <img src="assets/images/about/style2/grid1.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="image-grid">
-                                <img src="assets/images/about/style2/grid2.jpg" alt="">
+                            <div class="author-part">
+                                <span class="sign mb-10"><img src="assets/images/about/sign.png" alt="Sign"></span>
+                                <span class="post">CEO &amp; Founder of Educavo</span>
                             </div>
                         </div>
                     </div>

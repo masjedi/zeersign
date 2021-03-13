@@ -22,10 +22,10 @@
 						<div class="col-md-8 col-sm-12 m-auto">
 							<div class="card card-box">
 								<div class="card-header">
-									<strong>Add Career</strong>
+									<strong>Add New Position</strong>
 								</div>
 								<div class="card-body " id="bar-parent">
-								    <form method="post" action="{{route('careers.store')}}" enctype="multipart/form-data"> 
+								    <form method="post" action="{{route('careers.store')}}" enctype="multipart/form-data">
 										<div class="form-group">
 										@csrf
 									@if(LaravelLocalization::getCurrentLocale()=='en')
@@ -53,16 +53,19 @@
                                         </div>
                                         </div>
 
-										<label class="body">Position</label>
                                         <div class="form-group">
-											<input type="text" class="form-control" name="position" id="position" placeholder="Enter position.." required="">
+                                            <label class="body">Position</label>
+                                            <input type="text" class="form-control" name="position" id="position" placeholder="Enter position.." required="">
 										</div>
 
-										<label class="body">Permanent/Internship</label>
                                         <div class="form-group">
-											<input type="text" class="form-control" name="position_type" id="position_type" placeholder="Enter position type.." required="">
+                                            <label class="body">Vacancy Type</label>
+                                            <select name="position_type" id="" class="form-control">
+                                                <option value="" selected disabled>Select Vacancy Type</option>
+                                                <option value="Full Time">Full Time</option>
+                                                <option value="Internship">Internship</option>
+                                            </select>
 										</div>
-
                                         <label class="body">Description</label>
                                         <div class="form-group">
 											<textarea name="body" required="" id="summernote" cols="30" rows="10"></textarea>

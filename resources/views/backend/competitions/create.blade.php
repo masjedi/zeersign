@@ -51,12 +51,12 @@
 												placeholder="Competition Title">
                                         </div>
                                         <div class="form-group col-md-6 ">
-                                            <label for="simpleFormPassword">Competitions Date</label>
+                                            <label for="simpleFormPassword">Close Date</label>
                                             <input type="date" name="date" class="form-control"
                                                    placeholder="Chose date....">
                                         </div>
 									</div>
-                                        <label class="body">ompetition Description</label>
+                                        <label class="body">Competition Description</label>
                                         <div class="form-group">
 											<textarea name="body" id="summernote" cols="30" rows="5"></textarea>
                                         </div>

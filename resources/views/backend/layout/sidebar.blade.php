@@ -10,7 +10,7 @@
 							</li>
 
 							<li class="nav-item start active">
-								<a href="{{route('dashboard')}}" class="nav-link nav-toggle">
+								<a href="{{url('admin/dashboard')}}" class="nav-link nav-toggle">
 									<i class="material-icons">dashboard</i>
 									<span class="title">Dashboard</span>
 									<span class="selected"></span>
@@ -82,14 +82,14 @@
 									</li>
 								</ul>
 							</li>
-							
+
 							<li class="nav-item">
 								<a href="{{route('team.index')}}" class="nav-link nav-toggle">
 									<i class="material-icons">business_center</i>
 									<span class="title">Team Members</span>
 								</a>
 							</li>
-							
+
 							<li class="nav-item">
 								<a href="{{route('videos.index')}}" class="nav-link nav-toggle">
 									<i class="material-icons">group</i>

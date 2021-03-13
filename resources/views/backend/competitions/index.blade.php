@@ -47,9 +47,9 @@
                                 <tr>
                                     <th>Competitions Title</th>
                                     <th>Competitions Category</th>
-                                    <th>Competitions Date</th>
+                                    <th>CloseDate</th>
                                     <th>Competitions Status</th>
-                                    <th>View Registrations</th>
+                                    <th>View Applications</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
@@ -62,7 +62,7 @@
                                         <td>
                                             <input data-id="{{$compets->id}}" class="toggle-class" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle"  data-off="Closed" data-on="Open" {{ $compets->status ? 'checked' : '' }}>
                                         </td>
-                                        <td><a class="btn btn-info btn-sm my-2">Registrations<i class="fa fa-eye"></i></a></td>
+                                        <td><a class="btn btn-info btn-sm my-2">Applications<i class="fa fa-eye"></i></a></td>
                                         <td >
                                             <a  class="btn btn-primary btn-xs inline-form" href="{{route('competitions.edit',$compets->id)}}">
                                                 <i class="fa fa-pencil"></i>
@@ -98,12 +98,12 @@
         $(function() {
             $('.toggle-class').change(function() {
                 var status = $(this).prop('checked') == true ? 1 : 0;
-                var competcat_id = $(this).data('id');
+                var compet_id = $(this).data('id');
                 $.ajax({
                     type: "POST" ,
                     dataType: "json",
                     url: "{{url('status-change')}}",
-                    data: {'_token':'{{csrf_token()}}','status': status, 'competcat_id': competcat_id},
+                    data: {'_token':'{{csrf_token()}}','status': status, 'compet_id': compet_id},
                     success: function(data){
                         alert(data.success)
                     }

@@ -30,7 +30,7 @@
 								<div class="col-sm-12 col-md-12">
 									<div class="card card-topline-aqua">
 										<div class="card-header">
-						
+
 											<strong>
                                             News Table
 												<a href="{{route('news.create')}}" class="btn btn-md btn-primary float-right">Add News</a>
@@ -43,6 +43,7 @@
 														<tr>
 															<th>Title</th>
 															<th>Subtitle</th>
+															<th>Date</th>
 															<th>Image</th>
 															<th>Actions</th>
 														</tr>
@@ -52,6 +53,7 @@
 														<tr>
 															<td>{{$blog->title}}</td>
 															<td>{{$blog->sub_title}}</td>
+															<td>{{$blog->date}}</td>
                                                             <td>
 																<img src="{{asset('img/blog')}}/{{$blog->image}}"
 																style="height:80px; width:100px;">
@@ -63,7 +65,7 @@
                                                                     {{csrf_field()}}
                                                                     {{method_field('delete')}}
                                                                     <button class="btn btn-danger btn-xs inline-form" type="submit"><i class="fa fa-trash"></i></button>
-                                                                    
+
                                                                 </form>
                                                             </td>
 														</tr>
@@ -75,7 +77,7 @@
 									</div>
 								</div>
 							</div>
-					
+
 				</div>
 			</div>
 

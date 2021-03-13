@@ -22,12 +22,12 @@
 						<div class="col-md-8 col-sm-12 offset-2">
 							<div class="card card-box">
 								<div class="card-header">
-									<strong>Edit News</strong>
-									
-									
+									<strong>Edit Post</strong>
+
+
 								</div>
 								<div class="card-body " id="bar-parent">
-								    <form method="post" action="{{route('news.update',$blogs->id)}}" enctype="multipart/form-data"> 
+								    <form method="post" action="{{route('news.update',$blogs->id)}}" enctype="multipart/form-data">
 									{{method_field('put')}}
                                     @csrf
                                     @if(LaravelLocalization::getCurrentLocale()=='en')
@@ -47,6 +47,11 @@
 											<input type="text"  value="{{$blogs->sub_title}}" name="sub_title" class="form-control" id="simpleFormPassword"
 												placeholder="Enter title">
                                         </div>
+                                        <div class="form-group">
+                                            <label for="simpleFormPassword">Publish Date</label>
+                                            <input type="date" name="date" class="form-control" id="simpleFormPassword"
+                                                   placeholder="Publish Date" required value="{{$blogs->date}}">
+                                        </div>
                                         <label class="body">Description</label>
                                         <div class="form-group">
 										<textarea name="body" id="summernote" cols="30" rows="10" >
@@ -54,8 +59,8 @@
 										</textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label class="image"></label>
-                                            <input type="file" class="form=control" value="{{asset('img/blog')}}/{{$blogs->image}}" require>
+                                            <label class="image">Feature Image</label>
+                                            <input type="file" class="form-control" value="{{asset('img/blog')}}/{{$blogs->image}}" require>
                                         </div>
 									<div class="card-footer">
 										<center>

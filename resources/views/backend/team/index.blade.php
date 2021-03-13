@@ -29,50 +29,43 @@
 								<div class="col-sm-12 col-md-12">
 									<div class="card card-topline-aqua">
 										<div class="card-header">
-						
+
 											<strong>
-                                            Team Table
+                                            Team Members
 												<a href="{{route('team.create')}}" class="btn btn-md btn-primary float-right">Add New Member</a>
                                             </strong>
 										</div>
 										<div class="card-body ">
 											<div class="table-scrollable">
-												<table class="table">
+												<table class="table table-striped custom-table table-hover table-bordered">
 													<thead>
 														<tr class="text-center">
-															<th>Language</th>
-															<th>Name</th>
+                                                            <th>Image</th>
+                                                            <th>Name</th>
 															<th>Position</th>
 															<th>Twitter</th>
 															<th>Facebook</th>
 															<th>Linkedin</th>
-															<th>Bio</th>
-															<th>Image</th>
 															<th>Actions</th>
 														</tr>
 													</thead>
 													<tbody>
 													@foreach($members as $member)
 														<tr>
-															<td>{{$member->language}}</td>
+                                                            <td><img src="{{asset('/img/team')}}/{{$member->image}}" style="height:80px; width:100px;"></td>
 															<td>{{$member->name}}</td>
 															<td>{{$member->position}}</td>
 															<td>{{$member->twitter}}</td>
 															<td>{{$member->facebook}}</td>
 															<td>{{$member->linkedin}}</td>
-															<td>{!!$member->bio!!}</td>
-                                                            <td>
-																<img src="{{asset('/img/team')}}/{{$member->image}}"
-																style="height:80px; width:100px;">
-															</td>
                                                             <td class="m-auto">
-                                                                <a href="{{route('team.edit',$member->id)}}"><button class="btn btn-success btn-sm my-2"><i class="fa fa-edit"></i>
+                                                                <a href="{{route('team.edit',$member->id)}}"><button class="inline-form btn btn-success btn-sm my-2"><i class="fa fa-edit"></i>
                                                             </button></a>
-                                                                <form action="{{route('team.destroy', $member->id)}}" method="post">
+                                                                <form class="inline-form" action="{{route('team.destroy', $member->id)}}" method="post">
                                                                     {{csrf_field()}}
                                                                     {{method_field('delete')}}
                                                                     <button class="btn btn-danger btn-sm" type="submit"><i class="fa fa-trash"></i></button>
-                                                                    
+
                                                                 </form>
                                                             </td>
 														</tr>
@@ -84,7 +77,7 @@
 									</div>
 								</div>
 							</div>
-					
+
 				</div>
 			</div>
 
