@@ -52,14 +52,14 @@
     <!-- Slider Section End -->
 
     <!-- Services Section Start -->
-    <div class="rs-services style1">
+    <div class="rs-services style1 mb-100">
         <div class="row no-gutter">
             <div class="col-lg-3 col-md-6">
                 <div class="service-item overly1">
                     <img src="assets/images/services/1.jpg" alt="">
                     <div class="content-part">
                         <img src="assets/images/services/icons/1.png" alt="">
-                        <h4 class="title"><a href="#">University Life</a></h4>
+                        <h4 class="title"><a href="#">Women Support</a></h4>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                     <img src="assets/images/services/1.jpg" alt="">
                     <div class="content-part">
                         <img src="assets/images/services/icons/2.png" alt="">
-                        <h4 class="title"><a href="#">Graduation</a></h4>
+                        <h4 class="title"><a href="#">Events & Workshops</a></h4>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                     <img src="assets/images/services/1.jpg" alt="">
                     <div class="content-part">
                         <img src="assets/images/services/icons/3.png" alt="">
-                        <h4 class="title"><a href="#">Athletics</a></h4>
+                        <h4 class="title"><a href="#">Youths Programs</a></h4>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                     <img src="assets/images/services/1.jpg" alt="">
                     <div class="content-part">
                         <img src="assets/images/services/icons/1.png" alt="">
-                        <h4 class="title"><a href="#">Social</a></h4>
+                        <h4 class="title"><a href="#">Internships & Vacancies</a></h4>
                     </div>
                 </div>
             </div>
@@ -98,21 +98,6 @@
     <div id="rs-about" class="rs-about style1 pb-100 md-pb-70">
         <div class="container">
             <div class="row">
-<<<<<<< HEAD:resources/views/frontend/index.blade.php
-                <div class="col-lg-5 pr-65 md-pr-15 md-mb-50">
-                    <div class="about-intro">
-                        <div class="sec-title mb-40 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">
-                            <div class="sub-title primary">About POOHA</div>
-                            <h2 class="title mb-21 white-color">Welcome to POOHA Organization</h2>
-                            <div class="desc big white-color">Pervasive organization for human awareness (POOHA) is non‐profitable, non‐political
-and non‐government organization established in 2020 which is registered in the ministry of
-economy with registration number (4905), by a team that has been working to make a better
-society for life. </div>
-                        </div>
-                        <div class="btn-part wow fadeInUp" data-wow-delay="400ms" data-wow-duration="2000ms">
-                            <a class="readon2" href="#">Read More</a>
-                        </div>
-=======
                 <div class="col-lg-4 order-last">
                     <div class="notice-bord style1">
                         <h4 class="title">Notice Board</h4>
@@ -138,7 +123,6 @@ society for life. </div>
                                 <div class="desc">Lorem Ipsum is simply dummy text of the printing and setting</div>
                             </li>
                         </ul>
->>>>>>> 5aa779eef45ab43d1cf2f945d2d13c24b667d82c:resources/views/index.blade.php
                     </div>
                 </div>
                 <div class="col-lg-8 pr-50 md-pr-15">
@@ -146,7 +130,13 @@ society for life. </div>
                         <div class="sec-title mb-40">
                             <div class="sub-title primary wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 300ms; animation-name: fadeInUp;">About Us</div>
                             <h2 class="title wow fadeInUp" data-wow-delay="400ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 400ms; animation-name: fadeInUp;">World Best Virtual Learning Network Educavo eLearning</h2>
-                            <div class="desc wow fadeInUp" data-wow-delay="500ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 500ms; animation-name: fadeInUp;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, eius to mod tempor incidi dunt ut labore et dolore magna aliqua. Ut enims ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipisicing elit, eius to mod tempor incidi dunt ut labore et dolore magna aliqua. Ut enims ad minim veniam.Lorem sum dolor sit amet, consectetur adipisicing.</div>
+                            <div class="desc wow fadeInUp" data-wow-delay="500ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 500ms; animation-name: fadeInUp;"> Pervasive organization for human awareness (POOHA) is non‐profitable, non‐political
+and non‐government organization established in 2020 which is registered in the ministry of
+economy with registration number (4905), by a team that has been working to make a better
+society for life. This team decided to start their help in form of an organization and help children,
+youths and women by providing them enough opportunities for education, awareness,
+development of their economic and social life in order to have an educated and bright
+Afghanistan.</div>
                         </div>
                         <div class="sign-part wow fadeInUp" data-wow-delay="600ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 600ms; animation-name: fadeInUp;">
                             <div class="img-part">
@@ -174,113 +164,29 @@ society for life. </div>
                         <h2 class="title mb-0">Events Organized by POOHA</h2>
                     </div>
                 </div>
+                @foreach($events as $event)
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="degree-wrap">
-                        <img src="assets/images/degrees/1.jpg" alt="">
+                        <img src="{{asset('img/events')}}/{{$event->image}}" style="height: 350px;" alt="{{$event->title}}">
                         <div class="title-part">
-                            <h4 class="title">Undergraduate</h4>
+                            <h4 class="title">{{$event->title}}.</h4>
+                            <h4 class="title">Address: {{$event->vanue}}</h4>
                         </div>
                         <div class="content-part">
-                            <h4 class="title"><a href="#">Undergraduate</a></h4>
-                            <p class="desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod </p>
+                            <h4 class="title"><a href="#">{{$event->title}}</a></h4>
+                            <p class="desc">{{$event->sub_title}} </p>
                             <div class="btn-part">
                                 <a href="#">Read More</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="degree-wrap">
-                        <img src="assets/images/degrees/2.jpg" alt="">
-                        <div class="title-part">
-                            <h4 class="title">Postgraduate</h4>
-                        </div>
-                        <div class="content-part">
-                            <h4 class="title"><a href="#">Postgraduate</a></h4>
-                            <p class="desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod </p>
-                            <div class="btn-part">
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="degree-wrap">
-                        <img src="assets/images/degrees/3.jpg" alt="">
-                        <div class="title-part">
-                            <h4 class="title">PHD Scholarships</h4>
-                        </div>
-                        <div class="content-part">
-                            <h4 class="title"><a href="#">PHD Scholarships</a></h4>
-                            <p class="desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod </p>
-                            <div class="btn-part">
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="degree-wrap">
-                        <img src="assets/images/degrees/4.jpg" alt="">
-                        <div class="title-part">
-                            <h4 class="title">International Hubs</h4>
-                        </div>
-                        <div class="content-part">
-                            <h4 class="title"><a href="#">International Hubs</a></h4>
-                            <p class="desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod </p>
-                            <div class="btn-part">
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="degree-wrap">
-                        <img src="assets/images/degrees/5.jpg" alt="">
-                        <div class="title-part">
-                            <h4 class="title">PHD Scholarships</h4>
-                        </div>
-                        <div class="content-part">
-                            <h4 class="title"><a href="#">PHD Scholarships</a></h4>
-                            <p class="desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod </p>
-                            <div class="btn-part">
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
     <!-- Degree Section End -->
 
-    <!-- CTA Section Start -->
-    <div class="rs-cta style2">
-        <div class="partition-bg-wrap home2">
-            <div class="container">
-                <div class="row y-bottom">
-                    <div class="col-lg-6 pb-50 md-pt-100 md-pb-100">
-                        <div class="video-wrap">
-                            <a class="popup-videos" href="../../../watch.html?v=atMUy_bPoQI">
-                                <i class="fa fa-play"></i>
-                                <h4 class="title mb-0">Take a Video  Tour at Educavo</h4>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 pl-62 pt-134 pb-150 md-pl-15 md-pt-45 md-pb-50">
-                        <div class="sec-title mb-40 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">
-                            <h2 class="title mb-16">Admission Open for 2020</h2>
-                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eius to mod tempor incididunt ut labore et dolore magna aliqua. Ut enims ad minim veniam. Aenean massa. Cum sociis natoque penatibus et magnis.</div>
-                        </div>
-                        <div class="btn-part wow fadeInUp" data-wow-delay="400ms" data-wow-duration="2000ms">
-                            <a class="readon2" href="#">Apply Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- CTA Section End -->
 
     <!-- Latest Events Section Start -->
     <div class="rs-latest-events style1 bg-wrap pt-100 md-pt-70 md-pb-70">
@@ -425,24 +331,24 @@ society for life. </div>
                     <h2 class="title mb-0">Latest News & Events</h2>
                 </div>
                 <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800" data-dots="false" data-nav="false" data-nav-speed="false" data-center-mode="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="1" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="false" data-md-device-dots="false">
-                    <div class="blog-item">
+            @foreach($blogs as $blog)    
+                <div class="blog-item">
                         <div class="image-part">
-                            <img src="assets/images/blog/style2/1.jpg" alt="">
+                            <img src="{{asset('img/blog')}}/{{$blog->image}}" alt="">
                         </div>
                         <div class="blog-content new-style">
                             <ul class="blog-meta">
-                                <li><i class="fa fa-user-o"></i> Admin</li>
-                                <li><i class="fa fa-calendar"></i>June 15, 2019</li>
+                                <li><i class="fa fa-calendar"></i>{{$blog->date}}</li>
                             </ul>
-                            <h3 class="title"><a href="blog-single.html">University While The Lovely Valley Team Work</a></h3>
-                            <div class="desc">the acquisition of knowledge, skills, values befs, and habits. Educational methods include teach ing, training, storytelling</div>
+                            <h3 class="title"><a href="blog-single.html">{{$blog->title}}</a></h3>
+                            <div class="desc">{{$blog->sub_title}}</div>
                             <ul class="blog-bottom">
-                                <li class="cmnt-part"><a href="#">(12) Comments</a></li>
                                 <li class="btn-part"><a class="readon-arrow" href="#">Read More</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
+            @endforeach
             </div>
         </div>
         <!-- Blog Section End -->

@@ -1831,7 +1831,7 @@ ul.listing-style.modify li:before {
 }
 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu li a {
   transition: all 0.3s ease;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 500;
   height: 120px;
   line-height: 120px;

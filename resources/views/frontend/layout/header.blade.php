@@ -35,7 +35,7 @@
         <div class="menu-area menu-sticky">
             <div class="container">
                 <div class="row y-middle">
-                    <div class="col-lg-2">
+                    <div class="col-lg-3">
                         <div class="logo-cat-wrap">
                             <div class="logo-part pr-90">
                                 <a class="dark-logo" href="/">
@@ -48,14 +48,9 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-10 text-left">
+                    <div class="col-lg-9 text-left">
                         <div class="rs-menu-area">
                             <div class="main-menu">
-                                <div class="mobile-menu">
-                                    <a class="rs-menu-toggle">
-                                        <i class="fa fa-bars"></i>
-                                    </a>
-                                </div>
                                 <nav class="rs-menu">
                                     <ul class="nav-menu">
                                         <li class=" current-menu-item"> <a href="{{url('/')}}">Home</a></li>

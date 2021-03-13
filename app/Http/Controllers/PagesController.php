@@ -5,6 +5,8 @@ use app\Mail\UsersEmails;
 use Illuminate\app\Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Event;
+use App\Blog;
 class PagesController extends Controller
 {
     private $language;
@@ -16,7 +18,9 @@ class PagesController extends Controller
 
     public function index(){
 
-         return view('frontend.index');
+        $events = Event::all();
+        $blogs = Blog::all();
+         return view('frontend.index',compact('events','blogs'));
      }
   
      public function aboutus(){
