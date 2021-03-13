@@ -12,7 +12,7 @@
 		    </div>
 		</div>
         
-        <div class="full-width-header header-style1 home8-style4">
+        <div class="full-width-header header-style2">
             <!--Header Start-->
             @include('frontend.layout.header')
             <!--Header End-->
