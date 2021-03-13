@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Event;
 use App\Blog;
+use App\Competition;
 class PagesController extends Controller
 {
     private $language;
@@ -20,7 +21,8 @@ class PagesController extends Controller
 
         $events = Event::all();
         $blogs = Blog::all();
-         return view('frontend.index',compact('events','blogs'));
+        $competition = Competition::all()->take(6);
+         return view('frontend.index',compact('events','blogs','competition'));
      }
   
      public function aboutus(){
@@ -39,6 +41,18 @@ class PagesController extends Controller
 
      public function contactus(){
         return view('frontend.contact');
+    }
+
+    public function donate_form(){
+        return view('frontend.donate');
+    }
+    public function blogs(){
+        $blogs = Blog::all();
+        return view('frontend.blogs',compact('blogs'));
+    }
+    public function blog_details($id){
+        $blogs = Blog::where('id',$id)->get();
+        return view('frontend.blog_single',compact('blogs'));
     }
 
     public function form(Request $request)

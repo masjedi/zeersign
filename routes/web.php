@@ -40,6 +40,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 	Route::get('/overview','PagesController@overview');
 	Route::get('/whoweare','PagesController@whoweare');
 	Route::get('/whatwedo','PagesController@whatwedo');
+	Route::get('/donate_button','PagesController@donate_form');
+	Route::get('/blog_news','PagesController@blogs');
+	Route::get('/blog_single/{id}','PagesController@blog_details');
 
 });
 

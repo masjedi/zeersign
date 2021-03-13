@@ -5,14 +5,6 @@
 </head>
 <body class="home-style2">
 
-<!--Preloader area start here-->
-<div id="loader" class="loader">
-    <div class="loader-container">
-        <div class='loader-icon'>
-            <img src="{{asset('favicon.png')}}" alt="">
-        </div>
-    </div>
-</div>
 <!--Preloader area End here-->
 
 <!--Full width header Start-->
@@ -100,28 +92,14 @@
             <div class="row">
                 <div class="col-lg-4 order-last">
                     <div class="notice-bord style1">
-                        <h4 class="title">Notice Board</h4>
+                        <h4 class="title">Competitions</h4>
                         <ul>
+                        @foreach($competition as $compet)
                             <li class="wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 300ms; animation-name: fadeInUp;">
-                                <div class="date"><span>20</span>June</div>
-                                <div class="desc">Lorem Ipsum is simply dummy text of the printing and setting</div>
+                                <div class="date">{{$compet->date}}</div>
+                                <div class="desc">{{$compet->title}}</div>
                             </li>
-                            <li class="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 400ms; animation-name: fadeInUp;">
-                                <div class="date"><span>22</span>Aug</div>
-                                <div class="desc">Lorem Ipsum is simply dummy text of the printing and setting</div>
-                            </li>
-                            <li class="wow fadeInUp" data-wow-delay="500ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 500ms; animation-name: fadeInUp;">
-                                <div class="date"><span>14</span>May</div>
-                                <div class="desc">Lorem Ipsum is simply dummy text of the printing and setting</div>
-                            </li>
-                            <li class="wow fadeInUp" data-wow-delay="600ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 600ms; animation-name: fadeInUp;">
-                                <div class="date"><span>31</span>Sept</div>
-                                <div class="desc">Lorem Ipsum is simply dummy text of the printing and setting</div>
-                            </li>
-                            <li class="wow fadeInUp" data-wow-delay="700ms" data-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-delay: 700ms; animation-name: fadeInUp;">
-                                <div class="date"><span>28</span>Oct</div>
-                                <div class="desc">Lorem Ipsum is simply dummy text of the printing and setting</div>
-                            </li>
+                        @endforeach
                         </ul>
                     </div>
                 </div>
@@ -187,66 +165,6 @@ Afghanistan.</div>
     </div>
     <!-- Degree Section End -->
 
-
-    <!-- Latest Events Section Start -->
-    <div class="rs-latest-events style1 bg-wrap pt-100 md-pt-70 md-pb-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 pr-65 pt-24 md-pt-0 md-pr-15 md-mb-30">
-                    <div class="sec-title mb-42">
-                        <div class="sub-title primary">Latest Events</div>
-                        <h2 class="title mb-0">Educavo Events</h2>
-                    </div>
-                    <div class="single-img wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">
-                        <img src="assets/images/event/single.jpg" alt="Event Image">
-                    </div>
-                </div>
-                <div class="col-lg-6 lg-pl-0">
-                    <div class="event-wrap">
-                        <div class="events-short mb-30 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">
-                            <div class="date-part bgc1">
-                                <span class="month">June</span>
-                                <div class="date">20</div>
-                            </div>
-                            <div class="content-part">
-                                <div class="categorie">
-                                    <a href="#">Math</a> & <a href="#">English</a>
-                                </div>
-                                <h4 class="title mb-0"><a href="#">Educational Technology and Mobile Accessories Learning</a></h4>
-                            </div>
-                        </div>
-                        <div class="events-short mb-30 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="2000ms">
-                            <div class="date-part bgc2">
-                                <span class="month">June</span>
-                                <div class="date">21</div>
-                            </div>
-                            <div class="content-part">
-                                <div class="categorie">
-                                    <a href="#">Math</a> & <a href="#">English</a>
-                                </div>
-                                <h4 class="title mb-0"><a href="#">Educational Technology and Mobile Accessories Learning</a></h4>
-                            </div>
-                        </div>
-                        <div class="events-short wow fadeInUp" data-wow-delay="500ms" data-wow-duration="2000ms">
-                            <div class="date-part bgc3">
-                                <span class="month">June</span>
-                                <div class="date">22</div>
-                            </div>
-                            <div class="content-part">
-                                <div class="categorie">
-                                    <a href="#">Math</a> & <a href="#">English</a>
-                                </div>
-                                <h4 class="title mb-0"><a href="#">Educational Technology and Mobile Accessories Learning</a></h4>
-                            </div>
-                        </div>
-                        <div class="btn-part mt-55 md-mt-25 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="2000ms">
-                            <a href="#">View All Events</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Latest Events Section End -->
 
     <!-- Partner Start -->
@@ -275,56 +193,7 @@ Afghanistan.</div>
         </div>
     </div>
     <!-- Partner End -->
-
-    <!-- Testimonial Section Start -->
-    <div class="rs-testimonial style2 pt-100 pb-100 md-pt-70 md-pb-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 pr-90 md-pr-15 md-mb-30">
-                    <div class="donation-part wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">
-                        <img src="assets/images/donor/1.jpg" alt="">
-                        <h3 class="title mb-10">Donation helps us</h3>
-                        <div class="desc mb-38">Lorem ipsum dolor sit amet, consectetur adipisic ing elit, sed eius to mod tempors incididunt ut labore et dolore magna this aliqua  enims ad minim.</div>
-                        <div class="btn-part">
-                            <a class="readon2 mod" href="#">Become a donor</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7 lg-pl-0 ml--15 md-ml-0">
-                    <div class="testi-wrap mb-50 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">
-                        <div class="img-part">
-                            <img src="assets/images/testimonial/style2/1.jpg" alt="">
-                        </div>
-                        <div class="content-part pt-12">
-                            <div class="desc">Education is the passport to the future for tomorrow belongs to those who prepare for it today</div>
-                            <div class="info">
-                                <h5 class="name">Mahadi mansura</h5>
-                                <div class="designation">Head Teacher</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testi-wrap wow fadeInUp" data-wow-delay="400ms" data-wow-duration="2000ms">
-                        <div class="img-part">
-                            <img src="assets/images/testimonial/style2/2.jpg" alt="">
-                        </div>
-                        <div class="content-part pt-12">
-                            <div class="desc">Education is the passport to the future for tomorrow belongs to those who prepare for it today</div>
-                            <div class="info">
-                                <h5 class="name">Jonathon Lary</h5>
-                                <div class="designation">Math Teacher</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial Section End -->
-
-    <!-- Section Gray bg Wrap start -->
-    <div class="gray-bg">
-        <!-- Blog Section Start -->
-        <div id="rs-blog" class="rs-blog style2 pt-94 pb-100 md-pt-64 md-pb-70">
+    <div id="rs-blog" class="rs-blog style2 pt-94 pb-100 md-pt-64 md-pb-70">
             <div class="container">
                 <div class="sec-title mb-60 text-center">
                     <div class="sub-title primary">News Update </div>
@@ -351,29 +220,48 @@ Afghanistan.</div>
             @endforeach
             </div>
         </div>
-        <!-- Blog Section End -->
+    <!-- Testimonial Section Start -->
+    
+    <!-- Testimonial Section End -->
 
-        <!-- Newsletter section start -->
-        <div class="rs-newsletter style1 mb--124 sm-mb-0 sm-pb-70">
-            <div class="container">
-                <div class="newsletter-wrap">
-                    <div class="row y-middle">
-                        <div class="col-md-6 sm-mb-30">
-                            <div class="sec-title">
-                                <div class="sub-title white-color">Newsletter</div>
-                                <h2 class="title mb-0 white-color">Subscribe Us to join <br> Our Community </h2>
+    <!-- Section Gray bg Wrap start -->
+    
+    <div class="gray-bg">
+        <!-- Blog Section Start -->
+<div class="container">
+<div class=" text-center pt-100">
+            <span>Vulanteer</span>
+            <h3>Join us a Vulanteer</h3>
+        </div>
+    <div class="row">
+          
+        <div class="image col-md-6 pt-100 pb-100 md-pt-70">
+            <img src="{{asset('assets/images/services/1.jpg')}}" arl="image">
+        </div>
+        <div class="rs-login col-md-6 pb-100 md-pt-70 md-pb-70">
+                <div class="container">
+                    <div class="noticed">
+                        <div class="main-part">                           
+                            <div class="method-account">
+                                <h2 class="login">Vulanteer</h2>
+                                <h4>If you are willing to become a Vulanteer, fill the form bellow.</h4>
+                                <form id="contact-form">
+                                    <input type="text" name="name" placeholder="Name" required="">
+                                    <input type="text" name="email" placeholder="Email" required="">
+                                    <input type="text" name="phone" placeholder="Phone" required="">
+                                    <textarea class="form-control" id="message" name="message" placeholder=" Message" required=""></textarea>
+                                    <button type="submit" class="readon submit-btn mt-4">Submit</button>
+                                   
+                                </form>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <form class="newsletter-form">
-                                <input type="email" name="email" placeholder="Enter Your Email" required="">
-                                <button type="submit">Submit</button>
-                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+            <!-- Newsletter section start -->
+        @include('frontend.layout.newsletter')
         <!-- Newsletter section end -->
     </div>
     <!-- Section bg Wrap 2 End -->
@@ -381,92 +269,7 @@ Afghanistan.</div>
 <!-- Main content End -->
 
 <!-- Footer Start -->
-<footer id="rs-footer" class="rs-footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
-                    <h4 class="widget-title">Explore</h4>
-                    <ul class="site-map">
-                        <li><a href="#">eLearning School</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Courses</a></li>
-                        <li><a href="#">Become A Teacher</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
-                    <h4 class="widget-title">Categories</h4>
-                    <ul class="site-map">
-                        <li><a href="#">All Courses</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Genarel Education</a></li>
-                        <li><a href="#">Digital Marketing</a></li>
-                        <li><a href="#">Web Design</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
-                    <h4 class="widget-title">Resources</h4>
-                    <ul class="site-map">
-                        <li><a href="#">Become A Teacher</a></li>
-                        <li><a href="#">Instructor/Student Profile</a></li>
-                        <li><a href="#">Courses</a></li>
-                        <li><a href="#">Checkout</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-12 col-sm-12 footer-widget">
-                    <h4 class="widget-title">Address</h4>
-                    <ul class="address-widget">
-                        <li>
-                            <i class="flaticon-location"></i>
-                            <div class="desc">503 Old Buffalo Street Northwest #205 New York-3087</div>
-                        </li>
-                        <li>
-                            <i class="flaticon-call"></i>
-                            <div class="desc">
-                                <a href="tel:(123)-456-7890">(123)-456-7890</a> ,
-                                <a href="tel:(123)-456-7890">(123)-456-7890</a>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="flaticon-email"></i>
-                            <div class="desc">
-                                <a href="mailto:infoname@gmail.com">infoname@gmail.com</a> ,
-                                <a href="#">www.yourname.com</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row y-middle">
-                <div class="col-lg-4 md-mb-20">
-                    <div class="footer-logo md-text-center">
-                        <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 md-mb-20">
-                    <div class="copyright text-center md-text-left">
-                        <p>&copy; 2020 All Rights Reserved. Developed By <a href="http://rstheme.com/">RSTheme</a></p>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-right md-text-left">
-                    <ul class="footer-social">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+@include('frontend.layout.footer')
 <!-- Footer End -->
 
 <!-- start scrollUp  -->
@@ -475,23 +278,6 @@ Afghanistan.</div>
 </div>
 <!-- End scrollUp  -->
 
-<!-- Search Modal Start -->
-<div aria-hidden="true" class="modal fade search-modal" role="dialog" tabindex="-1">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span class="flaticon-cross"></span>
-    </button>
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="search-block clearfix">
-                <form>
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Search Here..." type="text">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 @include('frontend.layout.scripts')
 </body>
 </html>

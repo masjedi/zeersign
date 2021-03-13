@@ -22,7 +22,7 @@
                                 <a href="login.html">Login</a>/<a href="register.html">Register</a>
                             </li>
                             <li class="btn-part">
-                                <a class="apply-btn" href="#"><i class="flaticon-heart"></i> Donate Us</a>
+                                <a class="apply-btn" href="{{url('donate_button')}}"><i class="flaticon-heart"></i> Donate Us</a>
                             </li>
                         </ul>
                     </div>
@@ -106,74 +106,10 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Pages</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item-has-children right">
-                                                    <a href="#">Team</a>
-                                                    <ul class="sub-menu right">
-                                                        <li><a href="team.html">Team One</a></li>
-                                                        <li><a href="team2.html">Team Two</a></li>
-                                                        <li><a href="team-single.html">Team Single</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Event</a>
-                                                    <ul class="sub-menu right">
-                                                        <li><a href="events-style1.html">Event One</a></li>
-                                                        <li><a href="events-style2.html">Event Two</a></li>
-                                                        <li><a href="events-style3.html">Event Three</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Gallery</a>
-                                                    <ul class="sub-menu right">
-                                                        <li><a href="gallery-style1.html">Gallery One</a></li>
-                                                        <li><a href="gallery-style2.html">Gallery Two</a></li>
-                                                        <li><a href="gallery-style3.html">Gallery Three</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Shop</a>
-                                                    <ul class="sub-menu right">
-                                                        <li><a href="shop.html">Shop</a></li>
-                                                        <li><a href="shop-single.html">Shop Single</a></li>
-                                                        <li><a href="cart.html">Cart</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Others</a>
-                                                    <ul class="sub-menu right">
-                                                        <li><a href="faq.html">FAQ</a></li>
-                                                        <li><a href="error.html">404 Page</a></li>
-                                                        <li><a href="login.html">Login</a></li>
-                                                        <li><a href="register.html">Register</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
 
                                         <li class="menu-item-has-children">
-                                            <a href="#">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Blog Sidebar</a>
-                                                    <ul class="sub-menu right">
-                                                        <li><a href="blog-left.html">Blog Left Sidebar</a></li>
-                                                        <li><a href="blog-right.html">Blog Right Sidebar</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Single Post</a>
-                                                    <ul class="sub-menu right">
-                                                        <li><a href="blog-post-left.html">Post Left Sidebar</a></li>
-                                                        <li><a href="blog-post-right.html">Post Right Sidebar</a></li>
-                                                        <li><a href="blog-single.html">Full Width Post</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                            <a href="{{url('blog_news')}}">Blog</a>
+                                        
                                         </li>
 
                                         <li class="menu-item-has-children">

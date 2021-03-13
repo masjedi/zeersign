@@ -106,7 +106,7 @@ Afghanistan.</div>
 
 			
 			<!-- Partner End -->
-
+			@include('frontend.layout.newsletter')
             <!-- Newsletter section end -->
         </div> 
         <!-- Main content End --> 

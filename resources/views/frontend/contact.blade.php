@@ -4,18 +4,10 @@
 @include('frontend.layout.head')
     <body class="defult-home event-bg">
         
-        <!--Preloader area start here-->
-        <div id="loader" class="loader orange-color">
-            <div class="loader-container">
-                <div class='loader-icon'>
-                    <img src="assets/images/pre-logo1.png" alt="">
-                </div>
-            </div>
-        </div>
         <!--Preloader area End here-->
 
         <!--Full width header Start-->
-        <div class="full-width-header home8-style4 main-home">
+        <div class="full-width-header header-style2">
             <!--Header Start-->
             @include('frontend.layout.header')
             <!--Header End-->
@@ -27,7 +19,7 @@
             <!-- Breadcrumbs Start -->
             <div class="rs-breadcrumbs breadcrumbs-overlay">
                 <div class="breadcrumbs-img">
-                    <img src="assets/images/breadcrumbs/5.jpg" alt="Breadcrumbs Image">
+                    <img src="{{asset('assets/images/breadcrumbs/5.jpg')}}" alt="Breadcrumbs Image">
                 </div>
                 <div class="breadcrumbs-text white-color padding">
                     <h1 class="page-title white-color">Contact Us</h1>
@@ -52,7 +44,7 @@
         						</div>
         						<div class="address-text">
                                     <span class="label">Address</span>
-                                    <span class="des">228-5 Main Street, Georgia, USA</span>
+                                    <span class="des">Shahr-e Naw, Kabul, Afghanistan</span>
                                 </div>
         					</div>
         				</div>
@@ -63,7 +55,7 @@
                                 </div>
                                 <div class="address-text">
                                     <span class="label">Email Address</span>
-                                    <span class="des"><a href="mailto:info@rstheme.com">info@rstheme.com</a></span>
+                                    <span class="des"><a href="mailto:info@pooha.com">info@pooha.com</a></span>
                                 </div>
                             </div>
                         </div> 
@@ -74,7 +66,7 @@
                                 </div>
                                 <div class="address-text">
                                     <span class="label">Phone Number</span>
-                                    <span class="des"><a href="tel%2b0885898745.html">(+088)589-8745</a></span>
+                                    <span class="des"><a href="tel%2b0885898745.html">(+93)730-827353</a></span>
                                 </div>
                             </div>
                         </div>
@@ -83,8 +75,8 @@
             			<div class="col-lg-6 md-mb-30">
             				<!-- Map Section Start --> 
                             <div class="contact-map3">
-                                <iframe src="https://maps.google.com/maps?q=Fort%20Miley&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
-                            </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.6177933342756!2d69.1670026146164!3d34.53791019942824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d16f7f7b900e3b%3A0xa1c75408efbcd26c!2zU2hhaHJlIE5hdyBUb3dlciDYqNix2Kwg2LTZh9ix2YbZiA!5e0!3m2!1sen!2s!4v1615627768300!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>     
+                        </div>
             			</div>
             			<div class="col-lg-6 pl-60 md-pl-15">
 			        		<div class="contact-comment-box">
@@ -124,7 +116,7 @@
             	</div>
             </div>
             <!-- Contact Section End -->  
-
+        @include('frontend.layout.newsletter')
         </div> 
         <!-- Main content End --> 
 
@@ -138,23 +130,6 @@
         </div>
         <!-- End scrollUp  -->
 
-        <!-- Search Modal Start -->
-        <div aria-hidden="true" class="modal fade search-modal" role="dialog" tabindex="-1">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span class="flaticon-cross"></span>
-            </button>
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="search-block clearfix">
-                        <form>
-                            <div class="form-group">
-                                <input class="form-control" placeholder="Search Here..." type="text">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Search Modal End -->
 
        @include('frontend.layout.scripts')
