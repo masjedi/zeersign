@@ -7,12 +7,12 @@
 		<div id="loader" class="loader orange-color">
             <div class="loader-container">
                 <div class='loader-icon'>
-                    <img src="assets/images/pre-logo1.png" alt="">
+                    <img src="{{asset('assets/images/pre-logo1.png')}}" alt="">
 		        </div>
 		    </div>
 		</div>
         
-        <div class="full-width-header header-style1 home8-style4">
+        <div class="full-width-header header-style2">
             <!--Header Start-->
             @include('frontend.layout.header')
             <!--Header End-->
@@ -23,7 +23,7 @@
 			<!-- Breadcrumbs Start -->
 			<div class="rs-breadcrumbs breadcrumbs-overlay">
 					<div class="breadcrumbs-img">
-							<img src="assets/images/breadcrumbs/2.jpg" alt="Breadcrumbs Image">
+							<img src="{{asset('assets/images/breadcrumbs/2.jpg')}}" alt="Breadcrumbs Image">
 					</div>
 					<div class="breadcrumbs-text white-color">
 							<h1 class="page-title">What we do?</h1>
@@ -40,11 +40,11 @@
 
 			<!-- About Section Start -->
 			<div class="rs-about style1 pt-100 pb-100 md-pt-70 md-pb-70">
-				<div class="container">
+				<div class="container" id="whatwedo">
 					<div class="row align-items-center">
 						<div class="col-lg-6 padding-0 md-pl-15 md-pr-15 md-mb-30">
 							<div class="img-part">
-								<img class="" src="assets/images/about/history.png" alt="About Image">
+								<img class="" src="{{asset('assets/images/about/history.png')}}" alt="About Image">
 							</div>
                             <ul class="nav nav-tabs histort-part" id="myTab" role="tablist">
                                 <li class="nav-item tab-btns single-history">
@@ -73,7 +73,7 @@ Afghanistan is estimated 32.2 million in the year of 2019, in case that 15.8 mil
 male and 16.4 million of them are female.</div>
                                     </div>
                                     <div class="tab-img">
-                                        <img class="" src="assets/images/about/tab1.jpg" alt="Tab Image">
+                                        <img class="" src="{{asset('assets/images/about/tab1.jpg')}}" alt="Tab Image">
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="about-mission" role="tabpanel" aria-labelledby="about-mission-tab">
@@ -91,7 +91,7 @@ male and 16.4 million of them are female.</div>
 									</div>
                                     </div>
                                     <div class="tab-img">
-                                        <img class="" src="assets/images/about/tab2.jpg" alt="Tab Image">
+                                        <img class="" src="{{asset('assets/images/about/tab2.jpg')}}" alt="Tab Image">
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="about-admin" role="tabpanel" aria-labelledby="about-admin-tab">
@@ -105,7 +105,7 @@ contribute to all aspects of
 life.</div>
                                     </div>
                                     <div class="tab-img">
-                                        <img class="" src="assets/images/about/tab3.jpg" alt="Tab Image">
+                                        <img class="" src="{{asset('assets/images/about/tab3.jpg')}}" alt="Tab Image">
                                     </div>
                                 </div>
                             </div>

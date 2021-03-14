@@ -23,13 +23,13 @@
 			<!-- Breadcrumbs Start -->
 			<div class="rs-breadcrumbs breadcrumbs-overlay">
 					<div class="breadcrumbs-img">
-							<img src="assets/images/breadcrumbs/2.jpg" alt="Breadcrumbs Image">
+							<img src="{{asset('assets/images/breadcrumbs/2.jpg')}}" alt="Breadcrumbs Image">
 					</div>
 					<div class="breadcrumbs-text white-color">
 							<h1 class="page-title">Overview</h1>
 							<ul>
 								<li>
-									<a class="active" href="index.html">Home</a>
+									<a class="active" href="{{url('/')}}">Home</a>
 								</li>
 								<li>Overview</li>
 							</ul>
@@ -39,11 +39,11 @@
 
 			<!-- About Section Start -->
 			<div id="rs-about" class="rs-about style1 pt-100 pb-100 md-pt-70 md-pb-70">
-				<div class="container">
+				<div class="container" id="aboutSection">
 					<div class="row align-items-center">
 						<div class="col-lg-6 order-last padding-0 md-pl-15 md-pr-15 md-mb-30">
 							<div class="img-part">
-								<img class="" src="assets/images/about/about2orange.png" alt="About Image">
+								<img class="" src="{{asset('assets/images/about/about2orange.png')}}" alt="About Image">
 							</div>
 						</div>
 						<div class="col-lg-6 pr-70 md-pr-15 text-justify">

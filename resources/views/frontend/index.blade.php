@@ -88,7 +88,7 @@
 
     <!-- About Section Start -->
     <div id="rs-about" class="rs-about style1 pb-100 md-pb-70">
-        <div class="container">
+        <div class="container"  id="noticeboard">
             <div class="row">
                 <div class="col-lg-4 order-last">
                     <div class="notice-bord style1">
@@ -134,7 +134,7 @@ Afghanistan.</div>
 
     <!-- Degree Section Start -->
     <div class="rs-degree style1 modify gray-bg pt-100 pb-70 md-pt-70 md-pb-40">
-        <div class="container">
+        <div class="container" id="eventSection">
             <div class="row y-middle">
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="sec-title wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">
@@ -194,7 +194,7 @@ Afghanistan.</div>
     </div>
     <!-- Partner End -->
     <div id="rs-blog" class="rs-blog style2 pt-94 pb-100 md-pt-64 md-pb-70">
-            <div class="container">
+            <div class="container" id="newsSection">
                 <div class="sec-title mb-60 text-center">
                     <div class="sub-title primary">News Update </div>
                     <h2 class="title mb-0">Latest News & Events</h2>
@@ -203,7 +203,7 @@ Afghanistan.</div>
             @foreach($blogs as $blog)    
                 <div class="blog-item">
                         <div class="image-part">
-                            <img src="{{asset('img/blog')}}/{{$blog->image}}" alt="">
+                            <img src="{{asset('img/blog')}}/{{$blog->image}}" alt="" style="height:300px; widht: 400px;">
                         </div>
                         <div class="blog-content new-style">
                             <ul class="blog-meta">
@@ -216,8 +216,8 @@ Afghanistan.</div>
                             </ul>
                         </div>
                     </div>
-                </div>
             @endforeach
+                </div>
             </div>
         </div>
     <!-- Testimonial Section Start -->
@@ -228,7 +228,7 @@ Afghanistan.</div>
     
     <div class="gray-bg">
         <!-- Blog Section Start -->
-<div class="container">
+<div class="container" id="vulanteer">
 <div class=" text-center pt-100">
             <span>Vulanteer</span>
             <h3>Join us a Vulanteer</h3>
@@ -245,7 +245,7 @@ Afghanistan.</div>
                             <div class="method-account">
                                 <h2 class="login">Vulanteer</h2>
                                 <h4>If you are willing to become a Vulanteer, fill the form bellow.</h4>
-                                <form id="contact-form">
+                                <form id="contact-form" method="POST" action="{{route('indexForm')}}">
                                     <input type="text" name="name" placeholder="Name" required="">
                                     <input type="text" name="email" placeholder="Email" required="">
                                     <input type="text" name="phone" placeholder="Phone" required="">

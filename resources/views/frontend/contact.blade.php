@@ -71,7 +71,7 @@
                             </div>
                         </div>
             		</div>
-            		<div class="row align-items-center">
+            		<div class="row align-items-center" id="contactform">
             			<div class="col-lg-6 md-mb-30">
             				<!-- Map Section Start --> 
                             <div class="contact-map3">
@@ -80,7 +80,7 @@
             			</div>
             			<div class="col-lg-6 pl-60 md-pl-15">
 			        		<div class="contact-comment-box">
-			        			<div class="inner-part">
+			        			<div class="inner-part text-center">
                                     <h2 class="title mb-mb-15">Get In Touch</h2>
                                     <p>Have some suggestions or just want to say hi? Our  support team are ready to help you 24/7.</p>
                                 </div>

@@ -43,6 +43,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 	Route::get('/donate_button','PagesController@donate_form');
 	Route::get('/blog_news','PagesController@blogs');
 	Route::get('/blog_single/{id}','PagesController@blog_details');
+	Route::get('/event_details/{id}','PagesController@event_details');
+	Route::get('/competition_details/{id}','PagesController@compet_details');
+    //Index Form and Contact Form routes
+    Route::post('/vulanteer','PagesController@indexform')->name('indexForm');
 
 });
 

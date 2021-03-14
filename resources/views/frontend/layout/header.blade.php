@@ -17,12 +17,11 @@
                 </div>
                 <div class="col-md-5 text-right">
                     <ul class="topbar-right">
-                        <li class="login-register">
-                            <i class="fa fa-sign-in"></i>
-                            <a href="login.html">Login</a>/<a href="register.html">Register</a>
-                        </li>
+                    <li><a href="{{ LaravelLocalization::getLocalizedURL('ps') }}" class="text-light">{{__('menu.pashto')}}</a></li>
+                                        <li><a href="{{ LaravelLocalization::getLocalizedURL('en') }}" class="text-light">{{__('menu.english')}}</a></li>
+                                    
                         <li class="btn-part" >
-                            <a style="background-color: #FFCC05" class="apply-btn" href="#"> Donate Us <i class="fa fa-heart"></i></a>
+                            <a style="background-color: #FFCC05" class="apply-btn" href="{{url('donate_button')}}"> Donate Us <i class="fa fa-heart"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -58,20 +57,20 @@
                             </div>
                             <nav class="rs-menu">
                                 <ul class="nav-menu">
-                                    <li class=" "> <a href="/">Home</a></li>
+                                    <li class=" "> <a href="{{url('/')}}">Home</a></li>
                                     <li class="menu-item-has-children">
                                         <a href="#">About Us <i class="fa fa-caret-down"></i></a>
                                         <ul class="sub-menu">
                                             <li><a href="{{url('overview')}}">Overview</a> </li>
-                                            <li><a href="about2.html">Who We Are</a> </li>
-                                            <li><a href="about2.html">What We Do</a> </li>
+                                            <li><a href="{{url('whoweare')}}">Who We Are</a> </li>
+                                            <li><a href="{{url('whatwedo')}}">What We Do</a> </li>
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="#">Events & Workshops <i class="fa fa-caret-down"></i></a>
                                         <ul class="sub-menu">
                                             @foreach($types as $type)
-                                                <li><a href="course.html">{{$type->type}}</a> </li>
+                                                <li><a href="{{url('event_details',$type->id)}}">{{$type->type}}</a> </li>
                                             @endforeach
                                         </ul>
                                     </li>
@@ -88,7 +87,7 @@
                                             <li><a href="course.html"><i class="fa fa-caret-right"></i> Competitions </a>
                                                 <ul class="sub-menu right">
                                                     @foreach($comcats as $cat)
-                                                        <li><a href="blog-left.html">{{$cat->name}}</a></li>
+                                                        <li><a href="{{url('competition_details',$cat->id)}}">{{$cat->name}}</a></li>
                                                     @endforeach
                                                 </ul>
                                             </li>

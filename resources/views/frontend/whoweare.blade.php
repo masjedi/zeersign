@@ -7,12 +7,12 @@
 		<div id="loader" class="loader orange-color">
             <div class="loader-container">
                 <div class='loader-icon'>
-                    <img src="assets/images/pre-logo1.png" alt="">
+                    <img src="{{asset('assets/images/pre-logo1.png')}}" alt="">
 		        </div>
 		    </div>
 		</div>
         
-        <div class="full-width-header header-style1 home8-style4">
+        <div class="full-width-header header-style2">
             <!--Header Start-->
             @include('frontend.layout.header')
             <!--Header End-->
@@ -23,7 +23,7 @@
 			<!-- Breadcrumbs Start -->
 			<div class="rs-breadcrumbs breadcrumbs-overlay">
 					<div class="breadcrumbs-img">
-							<img src="assets/images/breadcrumbs/2.jpg" alt="Breadcrumbs Image">
+							<img src="{{asset('assets/images/breadcrumbs/2.jpg')}}" alt="Breadcrumbs Image">
 					</div>
 					<div class="breadcrumbs-text white-color">
 							<h1 class="page-title">Who we are?</h1>
@@ -39,11 +39,11 @@
 
 			<!-- About Section Start -->
 			<div id="rs-about" class="rs-about style1 pt-100 pb-100 md-pt-70 md-pb-70">
-				<div class="container">
+				<div class="container" id="whoweare">
 					<div class="row align-items-center">
 						<div class="col-lg-6 order-last padding-0 md-pl-15 md-pr-15 md-mb-30">
 							<div class="img-part">
-								<img class="" src="assets/images/about/about2orange.png" alt="About Image">
+								<img class="" src="{{asset('assets/images/about/about2orange.png')}}" alt="About Image">
 							</div>
 						</div>
 						<div class="col-lg-6 pr-70 md-pr-15 text-justify">

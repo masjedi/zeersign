@@ -19,9 +19,9 @@ class PagesController extends Controller
 
     public function index(){
 
-        $events = Event::all();
-        $blogs = Blog::all();
-        $competition = Competition::all()->take(6);
+        $events = Event::where('language', $this->language)->get()->take(5);
+        $blogs = Blog::where('language', $this->language)->get()->all();
+        $competition = Competition::where('language',$this->language)->get()->take(6);
          return view('frontend.index',compact('events','blogs','competition'));
      }
   
@@ -54,7 +54,34 @@ class PagesController extends Controller
         $blogs = Blog::where('id',$id)->get();
         return view('frontend.blog_single',compact('blogs'));
     }
+    public function event_details($id){
+        $events = Event::where('type_id',$id)->get();
+        return view('frontend.event_details',compact('events'));
+    }
+    public function compet_details($id){
+        $competition = Competition::where('competcat_id',$id)->get();
+        return view('frontend.compet_details',compact('competition'));
+    }
 
+    public function indexform(Request $request){
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required|number',
+            'message' => 'required'
+        ]);
+
+        $data = array(
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'message' => $request->message,
+        );
+
+        \Mail::to('info@pooha.org')->send(new VulanteerEmail($data));
+        Alert::success('Sent','Your submission was successful.');
+        return back();
+    }
     public function form(Request $request)
      {
          $this->validate($request, [
@@ -64,7 +91,7 @@ class PagesController extends Controller
          $data = array(
              'email' => $request->email
          );
-         \Mail::to('info@haramsaray.com')->send(new UsersEmails($data));
+         \Mail::to('info@pooha.org')->send(new UsersEmails($data));
          \Session::flash('message', 'Thanks for your message we will get back to you soon..');
          return back()->with('success', 'Thanks for contacting us!');
      }
