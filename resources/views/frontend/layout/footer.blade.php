@@ -6,26 +6,27 @@
                             <div class="footer-logo mb-30">
                                 <a href="index.html"><img src="assets/images/lite-logo.png" alt=""></a>
                             </div>
-                              <div class="textwidget white-color pr-60 md-pr-15"><p>We denounce with righteous indi gnation and dislike men who are so beguiled and demoralized by the charms of pleasure of your moment, so blinded by desire those who fail weakness.</p>
+                              <div class="textwidget white-color pr-60 md-pr-15"><p>Amplify and financially and technically support entrepreneur women and poor women to
+achieve their financial stability through our Donation Programs.</p>
                               </div>
-                              <ul class="footer_social">  
-                                  <li> 
-                                      <a href="#" target="_blank"><span><i class="fa fa-facebook"></i></span></a> 
+                              <ul class="footer_social">
+                                  <li>
+                                      <a href="#" target="_blank"><span><i class="fa fa-facebook"></i></span></a>
                                   </li>
-                                  <li> 
-                                      <a href="# " target="_blank"><span><i class="fa fa-twitter"></i></span></a> 
+                                  <li>
+                                      <a href="# " target="_blank"><span><i class="fa fa-twitter"></i></span></a>
                                   </li>
 
-                                  <li> 
-                                      <a href="# " target="_blank"><span><i class="fa fa-pinterest-p"></i></span></a> 
+                                  <li>
+                                      <a href="# " target="_blank"><span><i class="fa fa-pinterest-p"></i></span></a>
                                   </li>
-                                  <li> 
-                                      <a href="# " target="_blank"><span><i class="fa fa-google-plus-square"></i></span></a> 
+                                  <li>
+                                      <a href="# " target="_blank"><span><i class="fa fa-google-plus-square"></i></span></a>
                                   </li>
-                                  <li> 
-                                      <a href="# " target="_blank"><span><i class="fa fa-instagram"></i></span></a> 
+                                  <li>
+                                      <a href="# " target="_blank"><span><i class="fa fa-instagram"></i></span></a>
                                   </li>
-                                                                           
+
                               </ul>
                         </div>
                         <div class="col-lg-3 col-md-12 col-sm-12 footer-widget md-mb-50">
@@ -33,18 +34,18 @@
                             <ul class="address-widget">
                                 <li>
                                     <i class="flaticon-location"></i>
-                                    <div class="desc">374 William S Canning Blvd, River MA 2721, USA</div>
+                                    <div class="desc">Shahr-e Naw, Kabul, Afghanistan</div>
                                 </li>
                                 <li>
                                     <i class="flaticon-call"></i>
                                     <div class="desc">
-                                       <a href="tel:(+880)155-69569">(+880)155-69569</a>
+                                       <a>(+93)730-827253</a>
                                     </div>
                                 </li>
                                 <li>
                                     <i class="flaticon-email"></i>
                                     <div class="desc">
-                                        <a href="mailto:support@rstheme.com">support@rstheme.com</a>
+                                        <a href="mailto:info@pooha.com">info@pooha.com</a>
                                     </div>
                                 </li>
                             </ul>
@@ -74,7 +75,7 @@
                                         September 20, 2020
                                     </span>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="recent-post mb-20 md-pb-0">
                                 <div class="post-img">
                                     <img src="assets/images/footer/2.jpg" alt="">
@@ -94,11 +95,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="container">                    
+                <div class="container">
                     <div class="row y-middle">
                         <div class="col-lg-6 md-mb-20">
                             <div class="copyright">
-                                <p>&copy; 2020 All Rights Reserved. Developed By <a href="http://rstheme.com/">RSTheme</a></p>
+                                <p>&copy; 2020 All Rights Reserved. POOHA</p>
                             </div>
                         </div>
                         <div class="col-lg-6 text-right md-text-left">
