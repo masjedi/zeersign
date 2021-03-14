@@ -4,7 +4,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-12 col-sm-12 footer-widget">
                             <div class="footer-logo mb-30">
-                                <a href="index.html"><img src="assets/images/lite-logo.png" alt=""></a>
+                                <a href="index.html"><img src="{{asset('assets/images/lite-logo.png')}}" alt=""></a>
                             </div>
                               <div class="textwidget white-color pr-60 md-pr-15"><p>Amplify and financially and technically support entrepreneur women and poor women to
 achieve their financial stability through our Donation Programs.</p>
@@ -15,10 +15,6 @@ achieve their financial stability through our Donation Programs.</p>
                                   </li>
                                   <li> 
                                       <a href="# " target="_blank"><span><i class="fa fa-twitter"></i></span></a> 
-                                  </li>
-
-                                  <li> 
-                                      <a href="# " target="_blank"><span><i class="fa fa-pinterest-p"></i></span></a> 
                                   </li>
                                   <li> 
                                       <a href="# " target="_blank"><span><i class="fa fa-google-plus-square"></i></span></a> 
@@ -51,20 +47,19 @@ achieve their financial stability through our Donation Programs.</p>
                             </ul>
                         </div>
                         <div class="col-lg-3 col-md-12 col-sm-12 pl-50 md-pl-15 footer-widget md-mb-50">
-                            <h3 class="widget-title">Courses</h3>
+                            <h3 class="widget-title">Quick Links</h3>
                             <ul class="site-map">
-                                <li><a href="#">Courses</a></li>
-                                <li><a href="#">Course Two</a></li>
-                                <li><a href="#">Single Course</a></li>
-                                <li><a href="#">Profile</a></li>
-                                <li><a href="#">Login/Register</a></li>
+                                <li><a href="{{url('contact')}}">Contact Us</a></li>
+                                <li><a href="{{url('about')}}">About Us</a></li>
+                                <li><a href="{{url('gallery')}}">Photo Gallery</a></li>
+                                <li><a href="{{url('videos')}}">Video Gallery</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-3 col-md-12 col-sm-12 footer-widget">
-                            <h3 class="widget-title">Recent Posts</h3>
+                            <h3 class="widget-title text-center">Recent Posts</h3>
                             <div class="recent-post mb-20">
                                 <div class="post-img">
-                                    <img src="assets/images/footer/1.jpg" alt="">
+                                    <img src="{{asset('assets/images/footer/1.jpg')}}" alt="">
                                 </div>
                                 <div class="post-item">
                                     <div class="post-desc">
@@ -78,7 +73,7 @@ achieve their financial stability through our Donation Programs.</p>
                             </div> 
                             <div class="recent-post mb-20 md-pb-0">
                                 <div class="post-img">
-                                    <img src="assets/images/footer/2.jpg" alt="">
+                                    <img src="{{asset('assets/images/footer/2.jpg')}}" alt="">
                                 </div>
                                 <div class="post-item">
                                     <div class="post-desc">
@@ -99,15 +94,8 @@ achieve their financial stability through our Donation Programs.</p>
                     <div class="row y-middle">
                         <div class="col-lg-6 md-mb-20">
                             <div class="copyright">
-                                <p>&copy; 2020 All Rights Reserved. POOHA</p>
+                                <p>&copy; 2021 All Rights Reserved. POOHA</p>
                             </div>
-                        </div>
-                        <div class="col-lg-6 text-right md-text-left">
-                            <ul class="copy-right-menu">
-                                <li><a href="#">Event</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>

@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 use App\Event;
 use App\Blog;
 use App\Competition;
+use App\Gallery;
+use App\Video;
 class PagesController extends Controller
 {
     private $language;
@@ -61,6 +63,14 @@ class PagesController extends Controller
     public function compet_details($id){
         $competition = Competition::where('competcat_id',$id)->get();
         return view('frontend.compet_details',compact('competition'));
+    }
+    public function gallery(){
+        $galleries = Gallery::all();
+        return view('frontend.gallery',compact('galleries'));
+    }
+    public function videos(){
+        $videos = Video::all();
+        return view('frontend.video_gallery',compact('videos'));
     }
 
     public function indexform(Request $request){

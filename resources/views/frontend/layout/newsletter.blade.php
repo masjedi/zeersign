@@ -6,7 +6,7 @@
                                <div class="content-part">
                                    <div class="sec-title">
                                        <div class="title-icon md-mb-15">
-                                           <img src="assets/images/newsletter.png" alt="images">
+                                           <img src="{{asset('assets/images/newsletter.png')}}" alt="images">
                                        </div>
                                        <h2 class="title mb-0 white-color">Subscribe to Newsletter</h2>
                                    </div>

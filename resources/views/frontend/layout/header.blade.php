@@ -101,20 +101,17 @@
                                             <li><a href="course.html">RFPs/RFQs</a> </li>
                                         </ul>
                                     </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">Gallery <i class="fa fa-caret-down"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{{url('gallery')}}">Photo Gallery</a> </li>
+                                            <li><a href="{{url('videos')}}">Video Gallery</a> </li>
+                                        </ul>
+                                    </li>
                                     <li class="menu-item-has-children"><a href="{{url('contact')}}">Contact Us</a></li>
                                 </ul> <!-- //.nav-menu -->
                             </nav>
-                        </div> <!-- //.main-menu -->
-                        <div class="expand-btn-inner">
-                            <ul>
-                                <li>
-                                    <a class="hidden-xs rs-search short-border" data-target=".search-modal" data-toggle="modal" href="#">
-                                        <i class="flaticon-search"></i>
-                                    </a>
-                                </li>
-                            </ul>
-
-                        </div>
+                        </div> 
                     </div>
                 </div>
             </div>

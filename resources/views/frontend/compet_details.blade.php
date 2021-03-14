@@ -35,7 +35,7 @@
 
 	       <!-- Blog Section Start -->
         @foreach($competition as $compet)
-            <div class="rs-inner-blog orange-color pt-100 pb-100 md-pt-70 md-pb-70">
+            <div class="rs-inner-blog orange-color pt-100  md-pt-70 md-pb-70">
                 <div class="container">
                    <div class="blog-deatails">
                         <div class="bs-img">
@@ -53,14 +53,15 @@
                            </div>
                        </div>
                    </div>
-                   <div class="ps-navigation">
+                </div>
+            </div>
+        @endforeach
+        
+        <div class="container pb-100">
                        <ul class="float-left">
                            <li><a href="{{url('/')}}"><span><i class="fa fa-arrow-left"></i>Back</span></a></li>
                        </ul>
                    </div>
-                </div>
-            </div>
-        @endforeach
             <!-- Blog Section End -->  
 
             <!-- Newsletter section start -->
